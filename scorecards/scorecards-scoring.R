@@ -5,10 +5,10 @@ library(kableExtra)
 # Load data 
 scorecard <- googlesheets4::read_sheet(
     "1fHhRAjwYGVmgoHLUENvcYffHDjEQnpp7Rwt9tLeX_Xk", 
-    sheet = "Data", range = "C1:O56") 
+    sheet = "April", range = "C1:Q56") 
 
 # Specify max points!  
-MAX_POINTS <- 24 
+MAX_POINTS <- 28 
 
 # Assign scores 
 scores <- scorecard %>% 
@@ -16,13 +16,13 @@ scores <- scorecard %>%
     mutate(across(c(machine:history), 
                   ~ case_when(.x == "Yes" ~ 2, 
                               .x == "No" ~ 0)), 
-           across(c(cases_residents:tests_staff), 
+           across(c(cases_residents:vaccines_staff), 
                   ~ case_when(.x == "Facility-Level" ~ 2,
                               .x == "Statewide" ~ 1, 
                               .x == "" ~ 0)), 
-           across(c(machine:tests_staff), 
+           across(c(machine:vaccines_staff), 
                   ~ replace(., is.na(.), 0))) %>% 
-    rename_with(~paste0(., "_score"), c(machine:tests_staff)) %>% 
+    rename_with(~paste0(., "_score"), c(machine:vaccines_staff)) %>% 
     mutate(quality_total = machine_score + regularly_score + defined_score + history_score,
            residents_total = rowSums(select(., ends_with("residents_score"))), 
            staff_total = rowSums(select(., ends_with("_staff_score"))), 
