@@ -10,7 +10,7 @@ library(scales)
 # ------------------------------------------------------------------------------
 
 # Read raw data 
-raw <- readxl::read_excel("data/Transparency Study.xlsx")
+raw <- readxl::read_excel("data/raw/Transparency Study_4.26.21.xlsx")
 
 cleaned <- raw %>% 
     # Drop long column names 
@@ -37,12 +37,15 @@ cleaned <- raw %>%
                    TRUE ~ .x))
     ) %>% 
     # Clean numeric variables 
-    # TODO: Clean non-numeric characters (e.g. "appx.", "~", etc.)
-    mutate(
-        wave_1_pop_reduction = as.numeric(wave_1_pop_reduction), 
-        wave_1_pop_prior = as.numeric(wave_1_pop_prior), 
-        wave_1_pop_pct = wave_1_pop_reduction / wave_1_pop_prior
-    )
+    mutate(capacity = as.numeric(str_remove(capacity_clean, "-")), 
+           wave_1_pop_reduction = as.numeric(wave_1_pop_reduction_clean), 
+           wave_1_pop_prior = as.numeric(str_remove(wave_1_pop_prior_clean, "N/A"))) %>% 
+    # Clean date
+    mutate(date_checked = janitor::excel_numeric_to_date(as.numeric(date_checked))) %>% 
+    # Create source_reports excluding population
+    mutate(source_reports_covid = ifelse(
+        cases == "N" & testing == "N" & deaths == "N" & releases == "N", "N", "Y"
+        ))
 
 # ------------------------------------------------------------------------------
 # Summary stats and crosstabs 
@@ -57,9 +60,14 @@ get_crosstab <- function(df, metric){
 
 get_crosstab(cleaned, "pop_tier")
 get_crosstab(cleaned, "region")
+get_crosstab(cleaned, "dashboard")
 
 cleaned %>% 
     tabyl(region, pop_tier)
+
+# ------------------------------------------------------------------------------
+# Plots 
+# ------------------------------------------------------------------------------
 
 # Crosstab plotting function 
 get_plot <- function(df, group_var, pct_var) {
@@ -71,26 +79,62 @@ get_plot <- function(df, group_var, pct_var) {
         summarise(n = n()) %>% 
         pivot_wider(names_from = !!sym(pct_var), values_from = n) %>% 
         mutate(pct = Y / sum(N, Y)) %>% 
-        ggplot(aes(x = fct_rev(!!sym(group_var)), y = pct, label = percent(pct, accuracy = 1))) + 
-        geom_bar(stat = "identity", width = 0.7, fill = "#4C6788") + 
-        geom_text(size = 5, position = position_nudge(y = -0.03), color = "white", family = "Helvetica") +
+        ggplot(aes(x = fct_rev(!!sym(group_var)), y = pct, 
+                   label = paste0(percent(pct, accuracy = 1), " (n = ", Y, ")"))) + 
+        geom_point(size = 4.0, color = "#4C6788") + 
+        geom_segment(aes(x = fct_rev(!!sym(group_var)), 
+                         xend = fct_rev(!!sym(group_var)), 
+                         y = 0, 
+                         yend = pct), 
+                     size = 2.0, color = "#4C6788") + 
+        geom_text(size = 5, position = position_nudge(y = 0.055, x = 0.15), color = "black", family = "Helvetica") +
         coord_flip() + 
-        theme_behindbars(base_size = 14, base_color = "black") + 
+        theme_behindbars(base_size = 16, base_color = "black") + 
         scale_y_continuous(label = percent, limit = c(0, 0.5)) + 
         labs(x = x_lab) 
 }
 
-get_plot(cleaned, "region", "source_reports") + 
-    labs(title = "Percentage of Counties with Source Reporting Pertinent Data")
+# Pertinent data by tier 
+get_plot(cleaned, "pop_tier", "source_reports_covid") + 
+    labs(title = "% of counties with source reporting data by population tier")
+
+# Pertinent data by region 
+get_plot(cleaned, "region", "source_reports_covid") + 
+    labs(title = "% of counties with source reporting data by region")
+
+# Pertinent data by metric 
+cleaned %>% 
+    select(dashboard:releases) %>% 
+    pivot_longer(cols = c(dashboard:releases), names_to = "metric", values_to = "value") %>% 
+    group_by(metric, value) %>% 
+    summarise(n = n()) %>% 
+    pivot_wider(names_from = value, values_from = n) %>% 
+    mutate(metric = str_to_title(metric), 
+           pct = Y / sum(N, Y)) %>% 
+    ggplot(aes(x = fct_rev(metric), y = pct, 
+               label = paste0(percent(pct, accuracy = 1), " (n = ", Y, ")"))) + 
+    geom_point(size = 4.0, color = "#4C6788") + 
+    geom_segment(aes(x = fct_rev(metric), 
+                     xend = fct_rev(metric), 
+                     y = 0, 
+                     yend = pct), 
+                 size = 2.0, color = "#4C6788") + 
+    geom_text(size = 4, position = position_nudge(y = 0.03, x = 0.2), color = "black", family = "Helvetica") +
+    coord_flip() + 
+    theme_behindbars(base_size = 16, base_color = "black") + 
+    scale_y_continuous(label = percent, limit = c(0, 0.3)) + 
+    theme(axis.title.y = element_blank(), 
+          legend.position = "top") + 
+    labs(title = "% of all counties with source reporting data")
 
 # ------------------------------------------------------------------------------
-# Plots 
+# Summary plots 
 # ------------------------------------------------------------------------------
 
 # Pertinent data by metric and tier 
 cleaned %>% 
-    select(pop_tier, testing:releases) %>% 
-    pivot_longer(cols = c(testing:releases), names_to = "metric", values_to = "value") %>% 
+    select(pop_tier, dashboard:releases) %>% 
+    pivot_longer(cols = c(dashboard:releases), names_to = "metric", values_to = "value") %>% 
     group_by(pop_tier, metric, value) %>% 
     summarise(n = n()) %>% 
     pivot_wider(names_from = value, values_from = n) %>% 
@@ -104,10 +148,32 @@ cleaned %>%
                       labels = c("Tier 1", "Tier 2", "Tier 3"), 
                       values = c("#D7790F", "#82CAA4", "#4C6788")) + 
     theme_behindbars(base_size = 16, base_color = "black") + 
-    scale_y_continuous(label = percent, limits = c(0, 0.5)) + 
+    scale_y_continuous(label = percent, limits = c(0, 0.4)) + 
     theme(axis.title.y = element_blank(), 
           legend.position = "top") + 
-    labs(title = "Percentage of Counties with Source Reporting Pertinent Data")
+    labs(title = "% of counties with source reporting data by population tier")
+
+# Pertinent data by metric and region 
+cleaned %>% 
+    select(region, dashboard:releases) %>% 
+    pivot_longer(cols = c(dashboard:releases), names_to = "metric", values_to = "value") %>% 
+    group_by(region, metric, value) %>% 
+    summarise(n = n()) %>% 
+    pivot_wider(names_from = value, values_from = n) %>% 
+    mutate(metric = str_to_title(metric), 
+           pct = Y / sum(N, Y)) %>% 
+    ggplot(aes(x = fct_rev(metric), y = pct, fill = fct_rev(factor(region)))) + 
+    geom_bar(stat = "identity", position = "dodge") + 
+    coord_flip() + 
+    scale_fill_manual(name = "Region",
+                      breaks = c(1, 2, 3, 4),
+                      labels = c("Region 1", "Region 2", "Region 3", "Region 4"),
+                      values = c("#D7790F", "#82CAA4", "#4C6788", "#AE91A8")) +
+    theme_behindbars(base_size = 16, base_color = "black") + 
+    scale_y_continuous(label = percent, limits = c(0, 0.3)) + 
+    theme(axis.title.y = element_blank(), 
+          legend.position = "top") + 
+    labs(title = "% of counties with source reporting data by region")
 
 # Releases breakdown plot 
 cleaned %>% 
@@ -117,8 +183,13 @@ cleaned %>%
     summarise(n = n()) %>% 
     filter(value == "Y") %>% 
     ggplot(aes(x = reorder(breakdown_cat, n), y = n, label = n)) + 
-    geom_bar(stat = "identity", width = 0.7, fill = "#4C6788") + 
-    geom_text(size = 5, position = position_nudge(y = -3.0), color = "white", family = "Helvetica") +
+    geom_point(size = 4.0, color = "#4C6788") + 
+    geom_segment(aes(x = reorder(breakdown_cat, n), 
+                     xend = reorder(breakdown_cat, n), 
+                     y = 0, 
+                     yend = n), 
+                 size = 2.0, color = "#4C6788") + 
+    geom_text(size = 4, position = position_nudge(y = 0.06, x = 0.3), color = "black", family = "Helvetica") +
     coord_flip() +
     scale_x_discrete(
         labels = c("breakdown_minor_offenses" = "Minor Offenses", 
@@ -129,19 +200,53 @@ cleaned %>%
                    "breakdown_parole_violations" = "Probation/Parole Tech Violation")) + 
     theme_behindbars(base_size = 16, base_color = "black") + 
     theme(axis.title.y = element_blank()) + 
-    labs(title = "Number of Counties Based on Breakdown of Releases")
+    labs(title = "# of counties based on breakdown of releases")
 
 # ------------------------------------------------------------------------------
-# Merge population data  
+# Merge NYT covid data  
 # ------------------------------------------------------------------------------
 
-# Get FIPS codes for counties 
+nyt <- read_csv(stringr::str_c(
+    "https://raw.githubusercontent.com/nytimes/covid-19-data/", 
+    "master/prisons/facilities.csv"))
+
+# TODO: Make sure group_by(sum) makes sense! 
+nyt_ <- nyt %>% 
+    filter(facility_type == "Jail") %>% 
+    group_by(facility_county_fips) %>% 
+    summarise(
+        latest_inmate_population = sum_na_rm(latest_inmate_population), 
+        total_inmate_cases = sum_na_rm(total_inmate_cases), 
+        total_inmate_deaths = sum_na_rm(total_inmate_deaths), 
+        total_officer_cases = sum_na_rm(total_officer_cases), 
+        total_officer_deaths = sum_na_rm(total_officer_deaths)) %>% 
+    ungroup() %>% 
+    mutate(facility_county_fips = as.numeric(facility_county_fips)) 
+    
 fips_ <- cleaned %>% 
     filter(!county %in% c("New York City (including Kings County)", "Staunton County")) %>% 
     rowwise() %>% 
     mutate(fips = usmap::fips(state, county)) %>% 
     select(state, county, fips) %>% 
     mutate(fips = as.double(fips))
+
+cleaned_nyt <- cleaned %>% 
+    left_join(fips_, by = c("county", "state")) %>% 
+    left_join(nyt_, by = c("fips" = "facility_county_fips"))
+
+out <- cleaned_nyt %>% 
+    select(state:region, date_checked, 
+           source_reports_covid, 
+           source_reports:releases, news_reports, 
+           releases_policy:breakdown_other, legal_filing, 
+           capacity, wave_1_pop_reduction, wave_1_pop_prior, 
+           fips:total_officer_deaths)
+
+write.csv(out, "data/out/releases-transparency-study-raw.csv", row.names = FALSE, na = "")   
+
+# ------------------------------------------------------------------------------
+# Merge population data  
+# ------------------------------------------------------------------------------
 
 # Merge with Vera jail population data 
 vera <- read_csv(stringr::str_c(
@@ -156,24 +261,45 @@ vera_earliest <- vera %>%
     filter(date == first) %>% 
     select(-first, county_name, state_name)
 
-cleaned_pop <- cleaned %>% 
-    left_join(fips_, by = c("county", "state")) %>% 
+cleaned_nyt_vera <- cleaned_nyt %>% 
     left_join(vera_earliest, by = "fips")
 
 # Merge with BJS jail population data 
-# TODO: duplicate FIPS codes? 
-bjs <- haven::read_dta("data/37392-0001-Data.dta")
+# TODO: duplicate FIPS codes 
+bjs <- haven::read_dta("data/raw/37392-0001-Data.dta")
 
-cleaned_pop_bjs <- cleaned_pop %>% left_join(
+cleaned_nyt_vera_bjs <- cleaned_nyt_vera %>% left_join(
     bjs %>% 
-        select(CNTYCODE, TOTPOP) %>% 
         mutate(CNTYCODE = as.double(CNTYCODE)) %>% 
-        distinct(), 
-    by = c("fips" = "CNTYCODE")) %>% 
-    mutate(jail_pop_coalesce = coalesce(jail_population, TOTPOP))
+        group_by(CNTYCODE) %>% 
+        summarise(bjs_ADP = sum_na_rm(ADP), 
+                  bjs_RATED = sum_na_rm(RATED)), 
+    by = c("fips" = "CNTYCODE")) 
+
+# Save cleaned file 
+limited <- cleaned_nyt_vera_bjs %>% 
+    select(state, county, fips, pop_tier, region, date_checked, 
+           source_reports_covid, 
+           source_reports:releases, news_reports, 
+           releases_policy:breakdown_other, legal_filing, 
+           capacity, wave_1_pop_reduction, wave_1_pop_prior, 
+           nyt_latest_pop = latest_inmate_population, 
+           nyt_total_inmate_cases = total_inmate_cases, 
+           nyt_total_inmate_deaths = total_inmate_deaths, 
+           nyt_total_officer_cases = total_officer_cases, 
+           nyt_total_officer_deaths = total_officer_deaths, 
+           vera_jail_population = jail_population, 
+           vera_resident_population = resident_population, 
+           bjs_ADP, bjs_RATED) 
+
+write_csv(limited, "data/interim/releases-transparency-cleaned.csv", na = "")
+    
+# ------------------------------------------------------------------------------
+# More plots 
+# ------------------------------------------------------------------------------
 
 # Reporting pertinent data boxplots 
-cleaned_pop %>% 
+cleaned_nyt_vera_bjs %>% 
     ggplot(aes(x = source_reports, y = resident_population, fill = source_reports)) + 
     geom_boxplot() +
     scale_fill_bbdiscrete() + 
