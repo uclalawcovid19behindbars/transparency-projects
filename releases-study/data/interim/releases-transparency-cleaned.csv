@@ -1,331 +1,331 @@
-state,county,fips,pop_tier,region,date_checked,source_reports_covid,source_reports,dashboard,testing,cases,population,deaths,releases,news_reports,releases_policy,breakdown,breakdown_parole_violations,breakdown_minor_offenses,breakdown_bail,breakdown_time_left,breakdown_vulnerable,breakdown_other,legal_filing,capacity,wave_1_pop_reduction,wave_1_pop_prior,nyt_latest_pop,nyt_total_inmate_cases,nyt_total_inmate_deaths,nyt_total_officer_cases,nyt_total_officer_deaths,vera_jail_population,vera_resident_population,bjs_ADP,bjs_RATED
-Florida,Hillsborough County,12057,1,2,2020-08-03,N,N,N,N,N,N,N,N,Y,Policy,Y,N,N,N,N,N,Y,N,,164,,,344,0,149,0,2794,1471968,3032,5011
-Florida,Palm Beach County,12099,1,2,2020-08-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,333,0,176,4,1651,1496770,1907,3164
-Florida,Pinellas County,12103,1,2,2020-07-28,N,N,N,N,N,N,N,N,N,,,,,,,,,,3000,,,,250,1,0,0,2985,974996,2938,2915
-Florida,Baker County,12003,3,2,2020-07-28,N,N,N,N,N,N,N,N,N,,,,,,,,,,500,,,,,,,,490,29210,488,512
-Florida,Broward County,12011,1,2,2020-07-28,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,N,N,N,Y,N,1538,2,,,381,2,327,2,3513,1952778,3644,5144
-Florida,Clay County,12019,2,2,2020-12-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,480,,,,228,0,39,0,397,219252,,
-Florida,Flagler County,12035,2,2,2020-07-28,N,N,N,N,N,N,N,N,N,,,,,,,,,,400,,,,10,0,15,0,172,115081,,
-Florida,Gadsden County,12039,3,2,2020-12-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,157,,,,,,,,498,45660,,
-Florida,Jefferson County,12065,3,2,2020-07-28,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,52,14246,,
-Florida,Martin County,12085,2,2,2020-07-28,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,449,161000,478,696
-Florida,Miami-Dade County,12086,1,2,2020-07-28,N,N,N,N,N,N,N,N,Y,Policy,Y,N,N,N,N,N,Y,N,,18,,,1864,3,846,1,4034,2716940,4113,5661
-Florida,Orange County,12095,1,2,2020-08-03,N,Y,N,N,N,Y,N,N,Y,Releases,Y,N,N,N,N,N,Y,N,592,300,,,470,0,270,0,2339,1393452,2565,4721
-Florida,Osceola County,12097,2,2,2020-08-03,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,,,,,,,,,759,375751,,
-Florida,Pasco County,12101,1,2,2020-08-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,234,0,0,0,1643,553947,1738,1432
-Florida,Polk County,12105,1,2,2020-08-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,2554,724777,,
-Florida,Sumter County,12119,2,2,2020-08-03,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,521,,,,,,,,442,132420,442,527
-Florida,Taylor County,12123,3,2,2020-08-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,126,21569,,
-Florida,Wakulla County,12129,3,2,2020-08-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,350,,,,,,,,115,33739,,
-Louisiana,East Baton Rouge Parish,22033,2,3,2020-10-01,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,Y,N,N,N,N,1600,344,1600,,95,0,57,0,1632,440059,1395,1594
-Louisiana,Jefferson Parish,22051,2,3,2020-08-25,N,N,N,N,N,N,N,N,N,,,,,,,,,,1193,,,,,,,,1298,432493,895,1085
-Louisiana,Lafayette Parish,22055,2,3,2020-08-25,N,N,N,N,N,N,N,N,N,,,,,,,,,,954,,,,196,0,0,0,1861,244390,792,954
-Louisiana,Acadia Parish,22001,3,3,2020-08-25,N,N,N,N,N,N,N,N,N,,,,,,,,,,190,,,,,,,,178,62045,,
-Louisiana,Ascension Parish,22005,2,3,2020-09-08,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,Y,N,572,,,,,,,,503,126604,,
-Louisiana,Bienville Parish,22013,3,3,2020-09-08,N,N,N,N,N,N,N,N,N,,,,,,,,,,150,,,29,18,0,3,0,38,13241,,
-Louisiana,Calcasieu Parish,22019,2,3,2020-09-08,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,1267,203436,1175,1420
-Louisiana,Livingston Parish,22063,2,3,2020-09-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,673,,,,166,0,26,0,939,140789,671,673
-Louisiana,Orleans Parish,22071,2,3,2020-09-08,Y,Y,Y,Y,Y,N,N,Y,Y,Mix,Y,N,Y,N,N,N,N,N,1438,23,,849,358,1,103,3,1071,390144,1553,1938
-Louisiana,Pointe Coupee Parish,22077,3,3,2020-09-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,97,,,,,,,,115,21730,,
-Louisiana,Rapides Parish,22079,2,3,2020-09-15,N,N,N,N,N,N,N,N,N,,,,,,,,,,328,,,,,,,,976,129648,1091,1196
-Louisiana,St. Bernard Parish,22087,3,3,2020-09-12,N,N,N,N,N,N,N,N,N,,,,,,,,,,116,,,,,,,,212,47244,207,266
-Louisiana,St. James Parish,22093,3,3,2020-09-12,N,N,N,N,N,N,N,N,N,,,,,,,,,,396,,,,,,,,62,21096,,
-Louisiana,St. Mary Parish,22101,3,3,2020-09-12,N,N,N,N,N,N,N,N,N,,,,,,,,,,320,,,,,,,,245,49348,,
-Louisiana,St. Tammany Parish,22103,2,3,2020-09-12,N,N,N,N,N,N,N,N,N,,,,,,,,,,1192,,,,141,0,0,0,944,260419,1105,1239
-Louisiana,Tangipahoa Parish,22105,2,3,2020-09-10,N,N,N,N,N,N,N,N,N,,,,,,,,,,526,,,,,,,,615,134758,,
-Louisiana,Tensas Parish,22107,3,3,2020-12-11,N,N,N,N,N,N,N,N,N,,,,,,,,,,522,,,,,,,,18,4334,,
-Louisiana,Union Parish,22111,3,3,2020-09-10,N,N,N,N,N,N,N,N,N,,,,,,,,,,380,,,,,,,,,,330,388
-California,Del Norte County,6015,3,4,2020-12-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,142,,,,,,,,110,27812,101,105
-California,El Dorado County,6017,2,4,2020-12-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,461,,,,,,,,389,192843,396,461
-California,Inyo County,6027,3,4,2020-12-02,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,96,,,,,,,,39,18039,56,96
-California,Lake County,6033,3,4,2020-12-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,,,,,,,,,261,64386,307,286
-California,Los Angeles County,6037,1,4,2020-11-11,Y,Y,Y,N,Y,Y,Y,Y,Y,Mix,Y,N,N,N,Y,N,N,N,19217,3105,17002,,4189,19,993,0,17076,10039107,17165,21225
-California,Merced County,6047,2,4,2020-11-06,N,N,N,N,N,N,N,N,N,,,,,,,,,,753,,,,64,0,19,0,791,277680,806,753
-California,Napa County,6055,2,4,2020-10-20,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,N,Y,N,N,N,264,43,235,,,,,,254,137744,,
-California,Sacramento County,6067,1,4,2020-10-20,Y,Y,Y,Y,Y,Y,Y,N,Y,Releases,Y,N,N,N,N,N,N,N,4057,1200,,3373,1795,0,166,0,3546,1552058,3621,5059
-California,San Bernardino County,6071,1,4,2020-10-19,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,7400,0,,5137,990,0,0,0,5506,2180085,5632,7630
-California,San Joaquin County,6077,1,4,2020-10-19,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,N,N,1550,65,1230,1406,202,0,11,0,1382,762148,1285,1550
-California,San Luis Obispo County,6079,2,4,2020-10-19,Y,Y,N,N,Y,N,N,N,N,,,,,,,,,,683,,,428,95,0,31,0,508,283111,553,909
-California,San Mateo County,6081,1,4,2020-10-19,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,Y,Y,N,N,1516,858,,,,,,,974,766573,996,1360
-California,Sutter County,6101,3,4,2020-10-19,N,N,N,N,N,N,N,N,N,,,,,,,,,,704,,,,,,,,206,96971,269,358
-California,Yolo County,6113,2,4,2020-10-19,Y,Y,Y,Y,Y,Y,Y,N,Y,Mix,Y,N,Y,N,Y,Y,N,N,455,20,,,,,,,315,220500,364,452
-California,Yuba County,6115,3,4,2020-10-19,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,N,Y,N,N,428,213,427,,,,,,394,78668,362,426
-Illinois,Madison County,17119,2,2,2020-07-20,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,312,,300,,101,0,0,0,,,,
-Illinois,McHenry County,17111,2,2,2020-07-21,N,Y,N,N,N,Y,N,N,Y,,N,N,N,N,N,N,N,N,650,,,,55,0,16,0,208,307774,455,650
-Illinois,Winnebago County,17201,2,2,2020-07-21,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,1324,,,,58,0,40,0,,,805,1324
-Illinois,Champaign County,17019,2,2,2020-07-21,N,N,N,N,N,N,N,N,Y,Releases,N,N,Y,N,N,Y,N,N,313,,,,29,0,0,0,,,208,295
-Illinois,Cook County,17031,1,2,2020-07-21,Y,Y,Y,Y,Y,Y,Y,N,Y,Mix,N,N,Y,Y,N,Y,N,N,10000,966,5555,,1491,10,1178,4,5612,5150233,6524,11163
-Illinois,DuPage County,17043,1,2,2020-07-23,N,N,N,N,N,N,N,N,Y,,N,N,N,Y,N,N,Y,N,1000,160,529,,,,,,,,574,1056
-Illinois,Hancock County,17067,3,2,2020-07-23,N,N,N,N,N,N,N,N,N,,,,,,,,,,98,,,,,,,,,,,
-Illinois,Kane County,17089,1,2,2020-07-26,N,N,N,N,N,N,N,N,Y,Releases,N,N,Y,Y,Y,N,N,N,640,119,499,,244,0,71,0,489,532403,,
-Illinois,Kendall County,17093,2,2,2020-07-29,N,N,N,N,N,N,N,N,N,,,,,,,,,,203,,,,26,0,10,0,147,128990,,
-Illinois,Lake County,17097,1,2,2020-08-03,N,N,N,N,N,N,N,N,Y,Releases,N,N,Y,N,Y,N,N,N,740,40,479,,71,0,50,0,,,525,636
-Illinois,Monroe County,17133,3,2,2020-08-04,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,,,,,,,,,,,,
-Illinois,Moultrie County,17139,3,2,2020-08-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,56,,,,,,,,22,14501,,
-Illinois,Putnam County,17155,3,2,2020-08-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,5,,,,,,,,,,,
-Illinois,Sangamon County,17167,2,2,2020-08-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,314,,,,18,0,33,0,,,335,314
-Illinois,Schuyler County,17169,3,2,2020-08-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,34,,,,1,0,1,0,,,,
-Illinois,St. Clair County,17163,2,2,2020-08-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,418,,,,200,2,37,0,294,259686,,
-Illinois,Tazewell County,17179,2,2,2020-08-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,226,,,,46,0,19,0,,,,
-Illinois,Will County,17197,1,2,2020-08-08,N,N,N,N,N,N,N,N,N,,,,,,,,,,1000,,,,38,0,82,0,708,690743,650,909
-Michigan,Genesee County,26049,2,2,2020-10-17,Y,Y,N,Y,Y,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,690,70,500,566,178,0,55,0,572,405813,668,580
-Michigan,Kalamazoo County,26077,2,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,Y,Y,Y,N,N,425,200,400,,,,,,260,265066,,
-Michigan,Washtenaw County,26161,2,2,2020-10-17,Y,Y,Y,N,Y,Y,N,Y,Y,Releases,Y,N,N,Y,Y,Y,N,Y,404,151,332,,0,0,0,0,,,,
-Michigan,Bay County,26017,2,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,Y,N,N,N,249,52,165,,,,,,165,103126,205,249
-Michigan,Cass County,26027,3,2,2020-10-17,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Michigan,Cheboygan County,26031,3,2,2020-10-17,N,N,N,N,N,N,N,N,N,,,,,,,,,,103,,,,,,,,,,74,83
-Michigan,Houghton County,26061,3,2,2020-10-17,N,N,N,N,N,N,N,N,N,,,,,,,,,,28,,,,,,,,18,35684,44,54
-Michigan,Ingham County,26065,2,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,Y,N,Y,N,500,100,,,138,0,20,0,373,292406,440,444
-Michigan,Kent County,26081,1,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,Y,N,Y,N,1400,165,1100,750,79,1,0,0,,,1123,1477
-Michigan,Leelanau County,26089,3,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,72,,,,,,,,,,,
-Michigan,Livingston County,26093,2,2,2020-10-17,N,N,N,N,N,N,N,N,N,,,,,,,,,,411,,,,,,,,283,191995,,
-Michigan,Macomb County,26099,1,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,Y,N,Y,N,N,1238,568,862,,143,0,0,0,862,873972,1161,1201
-Michigan,Manistee County,26101,3,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,Y,Y,N,N,80,4,50,,,,,,40,24558,,
-Michigan,Midland County,26111,3,2,2020-10-17,N,N,N,N,N,N,N,N,N,,,,,,,,,,247,,,,,,,,116,83156,,
-Michigan,Oakland County,26125,1,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,N,Y,Y,N,1083,325,1283,716,151,0,60,0,1282,1257584,1355,1508
-Michigan,Ottawa County,26139,2,2,2020-10-17,N,N,N,N,N,N,N,N,N,,,,,,,,,,300,,,,,,,,,,335,462
-Michigan,Saginaw County,26145,2,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,Y,Y,N,N,513,73,317,,73,0,17,0,368,190539,400,513
-Michigan,Wayne County,26163,1,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Releases,N,N,Y,N,Y,Y,Y,N,,428,1381,,102,0,226,2,1410,1749343,1874,2951
-Minnesota,Anoka County,27003,2,2,2020-11-02,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,N,N,238,16,,,,,,,,,302,478
-Minnesota,Dakota County,27037,2,2,2020-11-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,263,,,,,,,,231,429021,,
-Minnesota,Wright County,27171,2,2,2020-11-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,288,,,,,,,,182,138377,,
-Minnesota,Beltrami County,27007,3,2,2020-11-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,140,,,,,,,,93,47188,,
-Minnesota,Carver County,27019,2,2,2020-11-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,,,,,,,,,23,105089,,
-Minnesota,Cass County,27021,3,2,2020-11-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,60,,,,,,,,5,29779,,
-Minnesota,Cottonwood County,27033,3,2,2020-11-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,21,,,,,,,,,,,
-Minnesota,Hennepin County,27053,1,2,2020-11-02,N,Y,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,N,N,N,N,839,213,815,581,359,0,0,0,444,1265843,1252,1248
-Minnesota,Lac qui Parle County,27073,3,2,2020-11-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,12,,,,,,,,4,6623,,
-Minnesota,Mower County,27099,3,2,2020-11-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,128,,,,,,,,63,40062,,
-Minnesota,Olmsted County,27109,2,2,2020-11-02,N,Y,N,N,N,Y,N,N,Y,Mix,N,N,N,N,N,N,N,N,292,,,,,,,,72,158293,,
-Minnesota,Ramsey County,27123,1,2,2020-11-02,N,N,N,N,N,N,N,N,Y,Mix,N,Y,Y,N,N,Y,Y,N,1056,153,393,306,72,0,0,0,66,550321,702,1056
-Minnesota,Red Lake County,27125,3,2,2020-09-23,N,Y,N,N,N,Y,N,N,Y,Mix,N,N,N,N,N,N,N,N,200,,,,,,,,,,,
-Minnesota,Scott County,27139,2,2,2020-09-24,N,Y,N,N,N,Y,N,N,Y,,N,N,N,N,N,N,N,N,264,25,78,,,,,,118,149013,,
-Minnesota,St. Louis County,27137,2,2,2020-09-24,N,Y,N,N,N,Y,N,N,Y,Releases,Y,N,Y,N,N,N,N,N,197,59,175,,,,,,104,199070,90,144
-Minnesota,Stearns County,27145,2,2,2020-09-29,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,135,,,,,,,,,,146,159
-Minnesota,Wabasha County,27157,3,2,2020-09-29,N,N,N,N,N,Y,N,N,Y,Mix,N,N,N,N,N,N,N,N,72,12,18,,,,,,5,21627,,
-Minnesota,Washington County,27163,2,2,2020-09-29,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,N,N,200,,,,,,,,,,,
-Pennsylvania,Allegheny County,42003,1,1,2020-08-20,Y,Y,Y,Y,Y,Y,Y,Y,Y,Releases,N,N,N,N,N,N,N,Y,2400,912,2488,1744,340,0,129,0,2488,1216045,2896,3859
-Pennsylvania,Armstrong County,42005,3,1,2020-09-07,N,N,N,N,N,N,N,N,N,,,,,,,,,,158,,,,,,,,176,64735,148,158
-Pennsylvania,Beaver County,42007,2,1,2020-08-21,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,376,,,,,,,,250,163929,,
-Pennsylvania,Bucks County,42017,1,1,2020-08-21,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,Y,712,250,909,,248,0,95,0,952,628270,1078,1178
-Pennsylvania,Cameron County,42023,3,1,,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,10,4447,,
-Pennsylvania,Chester County,42029,1,1,2020-08-22,Y,Y,Y,N,Y,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,912,107,746,,93,0,48,0,746,524989,841,1105
-Pennsylvania,Cumberland County,42041,2,1,2020-08-22,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,N,N,N,Y,N,400,92,,,,,,,409,253370,,
-Pennsylvania,Delaware County,42045,1,1,2020-08-22,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,Y,1883,493,1880,,169,0,116,2,1387,566747,1774,1863
-Pennsylvania,Lackawanna County,42069,2,1,2020-08-22,Y,Y,N,N,Y,N,N,N,N,,,,,,,,,,1200,,,,,,,,489,209674,864,1183
-Pennsylvania,Lawrence County,42073,3,1,2020-08-22,N,N,N,N,N,N,N,N,N,,,,,,,,,,275,,,,,,,,94,85512,208,287
-Pennsylvania,Lycoming County,42081,2,1,2020-08-25,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,Y,255,44,304,,107,0,0,0,247,113299,,
-Pennsylvania,Mercer County,42085,2,1,2020-08-25,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,311,60,308,,,,,,294,109424,275,311
-Pennsylvania,Northumberland County,42097,3,1,2020-08-25,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,284,100,248,,65,0,32,0,248,90843,,
-Pennsylvania,Philadelphia County,42101,1,1,2020-08-25,Y,Y,Y,Y,Y,N,Y,N,Y,Releases,N,N,N,N,N,N,N,Y,,1300,4756,,1440,0,0,0,4756,1584064,6158,5119
-Tennessee,Hamilton County,47065,2,3,2020-07-20,Y,Y,N,Y,Y,Y,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,1589,480,1484,,0,0,35,0,1513,367804,1583,1591
-Tennessee,Sumner County,47165,2,3,2020-07-20,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,Y,Y,N,N,832,252,787,,,,,,791,191283,724,832
-Tennessee,Wilson County,47189,2,3,2020-07-20,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,462,132,506,,92,1,38,0,514,144657,420,462
-Tennessee,Benton County,47005,3,3,2020-08-03,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,140,45,119,,,,,,107,16160,79,140
-Tennessee,Bradley County,47011,2,3,2020-08-03,Y,Y,N,Y,Y,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,,207,492,,55,0,32,0,481,108110,,
-Tennessee,Davidson County,47037,1,3,2020-07-22,Y,Y,N,Y,Y,N,N,Y,Y,Mix,N,N,N,N,N,N,N,N,2038,167,2121,1194,390,1,205,0,2072,694144,2499,3505
-Tennessee,Hamblen County,47063,3,3,2020-08-05,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,255,146,384,,106,0,0,0,363,64934,414,255
-Tennessee,Humphreys County,47085,3,3,2020-08-03,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,68,29,97,,,,,,114,18582,,
-Tennessee,Knox County,47093,2,3,2020-07-22,N,Y,N,N,N,Y,N,N,Y,Mix,Y,N,Y,Y,N,N,Y,N,1371,533,1458,,129,0,0,0,1415,470313,1464,1371
-Tennessee,Lawrence County,47099,3,3,2020-07-22,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,N,N,262,112,285,,,,,,280,44142,294,261
-Tennessee,Maury County,47119,3,3,2020-07-22,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,N,N,386,95,301,,,,,,289,96387,377,386
-Tennessee,Meigs County,47121,3,3,2020-07-23,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,56,30,80,,,,,,76,12422,,
-Tennessee,Montgomery County,47125,2,3,2020-07-23,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,880,125,550,,30,0,0,0,574,208993,490,736
-Tennessee,Overton County,47133,3,3,2020-07-23,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,143,119,143,,,,,,151,22241,,
-Tennessee,Rutherford County,47149,2,3,2020-07-24,Y,Y,N,Y,N,Y,N,Y,Y,Mix,Y,N,N,N,N,N,Y,Y,1272,250,1272,,124,0,45,0,1102,332285,930,1283
-Tennessee,Shelby County,47157,1,3,2020-08-13,Y,Y,Y,Y,Y,Y,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,6866,872,4578,2210,288,0,353,1,4635,937166,4590,6625
-Tennessee,Sullivan County,47163,2,3,2020-08-13,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,619,198,901,,,,,,933,158348,756,619
-Tennessee,Williamson County,47187,2,3,2020-08-13,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,Y,N,Y,N,454,277,327,,,,,,346,238412,339,454
-Texas,Dallas County,48113,1,3,2020-08-14,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,Y,N,7926,1000,5879,5653,1074,2,45,0,5683,2635516,5057,8215
-Texas,Harris County,48201,1,3,2020-08-16,Y,Y,Y,Y,N,Y,N,N,Y,Mix,Y,N,Y,N,N,N,Y,N,10566,1114,9072,8616,2609,6,1196,2,9059,4713325,8623,10258
-Texas,Tarrant County,48439,1,3,2020-08-16,Y,Y,N,N,Y,Y,N,N,N,,,,,,,,,,5000,,4102,4151,607,7,199,3,3992,2102515,,
-Texas,Travis County,48453,1,3,2020-08-16,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,3167,362,2233,1863,323,0,139,0,2233,1273954,2441,3167
-Texas,Bell County,48027,2,3,2020-08-17,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,706,42,852,,6,0,11,0,858,362924,797,1175
-Texas,Collin County,48085,1,3,2020-11-15,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,1298,77,1067,912,193,0,77,1,1047,1034730,1010,1298
-Texas,Denton County,48121,1,3,2020-10-01,Y,Y,N,Y,Y,N,Y,N,Y,Mix,N,N,N,N,N,N,N,N,1788,214,1229,1011,214,1,134,0,1195,887207,1188,1495
-Texas,El Paso County,48141,1,3,2020-10-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,2976,,2181,2224,1158,1,187,0,2137,839238,2330,2906
-Texas,Fort Bend County,48157,1,3,2020-10-01,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,1770,62,808,758,133,0,70,0,847,811688,981,1766
-Texas,Gregg County,48183,2,3,2020-10-01,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,916,39,714,,223,0,133,0,739,123945,697,916
-Texas,Hardin County,48199,3,3,2020-10-01,N,N,N,N,N,N,N,N,Y,Policy,Y,N,Y,N,Y,N,N,N,196,18,142,,,,,,144,57602,154,196
-Texas,Harrison County,48203,3,3,2020-10-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,364,,199,,,,,,204,66553,,
-Texas,Hidalgo County,48215,1,3,2020-10-01,N,N,N,N,N,N,N,N,Y,Policy,Y,N,Y,N,N,N,N,N,1232,258,1047,,127,0,98,0,1047,868707,1055,1232
-Texas,Jefferson County,48245,2,3,2020-10-01,N,Y,N,N,N,Y,N,N,Y,Mix,Y,N,Y,Y,N,N,N,N,1716,322,1117,,459,0,106,1,1016,251565,945,1683
-Texas,Knox County,48275,3,3,2020-09-11,N,N,N,N,N,N,N,N,N,,,,,,,,,,14,,8,,,,,,7,3664,,
-Texas,Nueces County,48355,2,3,2020-10-01,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,1068,31,933,1018,416,1,114,1,900,362294,,
-Texas,Pecos County,48371,3,3,2020-09-11,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,49,6,26,,12,0,4,0,31,15823,,
-Texas,Shackelford County,48417,3,3,2020-08-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,27,,6,,,,,,11,3265,,
-Texas,Wichita County,48485,2,3,2020-08-21,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,624,40,460,414,73,0,57,0,460,132230,,
-Arizona,Apache County,4001,3,4,2020-10-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,150,,,,,,,,79,71887,,
-Arizona,Cochise County,4003,2,4,2020-10-03,N,N,N,N,N,N,N,N,N,Releases,,,,,,,,,160,100,,,33,0,26,0,229,125922,,
-Arizona,Coconino County,4005,2,4,2020-10-03,Y,Y,N,Y,Y,Y,N,N,Y,,N,N,N,N,N,N,N,N,477,,,300,188,0,35,0,,,476,623
-Arizona,Gila County,4007,3,4,2020-10-08,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,,,,,,,,,,,,
-Arizona,Graham County,4009,3,4,2020-10-11,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,,,,,,,,,30,38837,,
-Arizona,Greenlee County,4011,3,4,2020-10-11,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Arizona,La Paz County,4012,3,4,2020-10-11,N,N,N,N,N,N,N,N,N,Releases,,,,,,,,,90,,,,,,,,,,,
-Arizona,Maricopa County,4013,1,4,2020-10-11,Y,Y,Y,Y,Y,N,Y,Y,N,,,,,,,,,,,,,,2661,0,495,0,5306,4485414,7532,10006
-Arizona,Mohave County,4015,2,4,2020-12-04,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,Y,N,1100,,,391,70,0,17,0,351,212181,546,688
-Arizona,Navajo County,4017,2,4,2020-12-04,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,350,28,1740,,,,,,306,110924,269,444
-Arizona,Pima County,4019,1,4,2020-12-04,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,,,,1450,654,2,139,0,1606,1047279,1849,2105
-Arizona,Pinal County,4021,2,4,2020-12-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,1503,,,,85,0,0,0,,,496,1503
-Arizona,Santa Cruz County,4023,3,4,2020-12-04,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,372,,,,,,,,,,,
-Arizona,Yavapai County,4025,2,4,2020-12-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,477,,,,15,0,60,1,473,235099,561,797
-Arizona,Yuma County,4027,2,4,2020-12-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,756,,,381,165,0,95,0,356,213787,453,756
-New Hampshire,Belknap County,33001,3,1,2020-08-22,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,N,N,Y,Y,N,72,3,,,,,,,64,61303,,
-New Hampshire,Carroll County,33003,3,1,2020-08-22,N,N,N,N,N,N,N,N,N,,,,,,,,,,110,,,,,,,,,,,
-New Hampshire,Cheshire County,33005,3,1,2020-08-23,N,N,N,N,N,Y,N,N,Y,Releases,Y,N,N,N,Y,Y,Y,N,173,2,,,,,,,44,76085,,
-New Hampshire,Coos County,33007,3,1,2020-08-23,N,N,N,N,N,N,N,N,N,,,,,,,,,,61,,,,,,,,,,,
-New Hampshire,Grafton County,33009,3,1,2020-08-23,N,N,N,N,N,N,N,N,N,,,,,,,,,,150,,,,,,,,,,,
-New Hampshire,Hillsborough County,33011,2,1,2020-08-23,Y,Y,N,N,Y,Y,N,Y,N,,,,,,,,,,,,,,108,0,42,0,,,417,736
-New Hampshire,Merrimack County,33013,2,1,2020-08-23,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,Y,N,N,,12,,,,,,,,,,
-New Hampshire,Rockingham County,33015,2,1,2020-08-23,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,N,Y,N,N,N,124,12,,108,22,0,8,0,,,189,423
-New Hampshire,Strafford County,33017,2,1,2020-08-23,N,N,N,N,N,N,N,N,N,,,,,,,,,,495,,,,126,0,22,0,,,380,450
-New Hampshire,Sullivan County,33019,3,1,2020-08-23,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-North Dakota,Adams County,38001,3,2,2020-07-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-North Dakota,Benson County,38005,3,2,2020-07-20,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,,,,,,,,,,,,
-North Dakota,Burleigh County,38015,3,2,2020-07-20,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,555,,,,,,,,291,95626,282,555
-North Dakota,Cass County,38017,2,2,2020-07-21,Y,Y,N,Y,Y,Y,Y,N,Y,Releases,N,N,N,Y,N,N,N,N,,89,276,,63,0,22,0,179,181923,279,358
-North Dakota,Divide County,38023,3,2,2020-07-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-North Dakota,Grand Forks County,38035,3,2,2020-09-14,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,Y,N,N,N,N,,17,201,,146,0,27,0,,,205,242
-North Dakota,Grant County,38037,3,2,2020-09-14,N,N,N,N,N,N,N,N,N,,,,,,,,,,154,,,,,,,,,,,
-North Dakota,Logan County,38047,3,2,2020-09-14,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-North Dakota,McKenzie County,38053,3,2,2020-09-14,N,N,N,N,N,N,N,N,N,,,,,,,,,,135,,,,,,,,,,,
-North Dakota,McLean County,38055,3,2,2020-09-14,N,N,N,N,N,N,N,N,N,,,,,,,,,,29,,,,,,,,,,,
-North Dakota,Mercer County,38057,3,2,2020-09-14,N,N,N,N,N,N,N,N,N,,,,,,,,,,52,,,,,,,,,,,
-North Dakota,Richland County,38077,3,2,2020-09-14,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,N,N,,47,223,,,,,,,,,
-North Dakota,Steele County,38091,3,2,2020-09-14,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-North Dakota,Stutsman County,38093,3,2,2020-09-14,N,Y,N,N,N,Y,N,N,Y,,Y,N,N,Y,N,N,N,N,92,35,70,,,,,,54,20704,,
-North Dakota,Walsh County,38099,3,2,2020-09-14,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Oregon,Clackamas County,41005,2,4,2020-11-01,N,Y,N,N,N,Y,N,N,Y,Mix,Y,N,N,N,N,Y,N,N,434,314,466,,4,0,10,0,403,418187,468,465
-Oregon,Deschutes County,41017,2,4,2020-11-07,N,Y,N,N,N,Y,N,N,Y,Mix,Y,N,Y,N,Y,N,N,N,452,150,300,,,,,,266,197692,,
-Oregon,Douglas County,41019,2,4,2020-11-07,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,N,N,283,14,151,,,,,,162,110980,217,280
-Oregon,Harney County,41025,3,4,2020-11-08,N,Y,N,N,N,Y,N,N,Y,Mix,N,N,N,N,N,N,N,N,,2,9,,,,,,8,7393,,
-Oregon,Hood River County,41027,3,4,2020-11-08,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Oregon,Jefferson County,41031,3,4,2020-11-22,N,N,N,N,N,N,N,N,N,,,,,,,,,,160,,,,,,,,63,24658,,
-Oregon,Klamath County,41035,3,4,2020-11-22,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,Y,N,144,19,120,,,,,,142,68238,,
-Oregon,Lane County,41039,2,4,2020-11-22,Y,Y,N,Y,Y,N,N,Y,N,,,,,,,,,,,,,260,128,0,0,0,,,,
-Oregon,Linn County,41043,2,4,2020-11-22,N,Y,N,N,N,Y,N,N,Y,Mix,N,N,N,N,N,N,N,N,230,92,207,,2,0,6,0,184,129749,7,12
-Oregon,Marion County,41047,2,4,2020-11-23,N,Y,N,N,N,Y,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,,134,415,,,,,,499,347818,,
-Oregon,Multnomah County,41051,1,4,2020-12-02,Y,Y,N,N,N,N,N,Y,Y,Mix,Y,N,Y,Y,Y,Y,N,N,,358,1097,512,215,0,53,0,1145,812855,1088,1192
-Oregon,Sherman County,41055,3,4,2020-12-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Oregon,Union County,41061,3,4,2020-12-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,37,,,,,,,,18,26835,,
-Oregon,Wasco County,41065,3,4,2020-12-16,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,150,,,,,,,,115,26682,146,160
-Oregon,Washington County,41067,1,4,2020-12-16,N,N,N,N,N,N,N,N,Y,,Y,N,N,N,N,Y,Y,N,,72,890,,,,,,881,601592,594,572
-Hawaii,Hawaii County,15001,2,4,2021-01-26,Y,Y,Y,Y,Y,Y,Y,Y,Y,Releases,Y,Y,Y,N,N,N,N,N,226,24,331,268,1,0,1,0,,,,
-Hawaii,Honolulu County,15003,1,4,2021-01-26,Y,Y,Y,Y,Y,Y,Y,Y,Y,Releases,Y,N,Y,N,N,N,N,N,950,127,973,776,457,0,108,0,,,,
-Hawaii,Kauai County,15007,3,4,2021-01-26,Y,Y,Y,Y,Y,Y,Y,Y,Y,Releases,Y,N,Y,N,N,N,N,N,130,10,140,,,,,,,,,
-Hawaii,Maui County,15009,2,4,2021-01-26,Y,Y,Y,Y,Y,Y,Y,Y,Y,Releases,N,N,N,N,N,N,N,N,301,46,312,270,94,0,2,0,,,,
-Kentucky,Bullitt County,21029,3,3,2020-11-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,315,,,,,,,,293,81676,,
-Kentucky,Christian County,21047,3,3,2020-11-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,652,,,,,,,,733,70461,847,707
-Kentucky,Madison County,21151,3,3,2020-11-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,184,,,,60,0,12,0,355,92987,,
-Kentucky,Boone County,21015,2,3,2020-11-04,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,500,,,,,,,,427,133581,590,500
-Kentucky,Butler County,21031,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,36,,,,46,0,34,0,53,12879,,
-Kentucky,Edmonson County,21061,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Kentucky,Fayette County,21067,2,3,2020-12-01,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,Y,Y,N,N,,48,1150,962,622,0,86,0,1280,323152,1446,1500
-Kentucky,Fulton County,21075,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,525,29,,,,,,,509,5969,408,525
-Kentucky,Grayson County,21085,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,26,1,8,0,656,26427,638,518
-Kentucky,Hancock County,21091,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Kentucky,Hardin County,21093,2,3,2020-12-01,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,Y,Y,N,N,648,9,,,56,0,12,0,702,110958,779,648
-Kentucky,Jackson County,21109,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,141,13329,,
-Kentucky,Jefferson County,21111,1,3,2020-12-01,Y,Y,Y,Y,Y,Y,N,Y,Y,Mix,N,N,N,N,N,N,N,N,,1200,1800,1272,370,0,177,0,1788,766757,2375,1793
-Kentucky,Kenton County,21117,2,3,2020-12-01,N,N,N,N,N,N,N,N,Y,Releases,Y,Y,Y,N,N,N,Y,N,650,274,716,,84,0,26,0,767,166998,690,602
-Kentucky,Pulaski County,21199,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,24,0,11,0,357,64979,,
-Kentucky,Rowan County,21205,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,312,24460,123,78
-Kentucky,Warren County,21227,2,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,562,,,,321,0,16,0,653,132896,703,562
-Kentucky,Wolfe County,21237,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Kansas,Leavenworth County,20103,3,2,2020-11-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Kansas,Reno County,20155,3,2,2020-11-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,153,28,0,13,0,7,61998,,
-Kansas,Riley County,20161,3,2,2020-11-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,147,,,,4,0,5,0,,,82,150
-Kansas,Barber County,20007,3,2,2020-11-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Kansas,Brown County,20013,3,2,2021-02-03,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,50,,,,,,,,11,9564,,
-Kansas,Butler County,20015,3,2,2021-02-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,230,,,,50,0,21,0,,,,
-Kansas,Douglas County,20045,2,2,2021-02-09,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,Y,N,N,Y,186,14,151,125,11,0,9,0,132,122259,,
-Kansas,Hodgeman County,20083,3,2,2021-02-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,8,,,,,,,,,,,
-Kansas,Johnson County,20091,1,2,2021-02-21,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,,,,,,,,,,,773,1081
-Kansas,Morris County,20127,3,2,2021-02-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Kansas,Ness County,20135,3,2,2021-02-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Kansas,Pawnee County,20145,3,2,2021-02-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,16,,,,,,,,,,,
-Kansas,Pratt County,20151,3,2,2021-02-21,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,,,,,,,,,13,9164,,
-Kansas,Republic County,20157,3,2,2021-10-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Kansas,Sedgwick County,20173,1,2,2020-10-20,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,N,N,N,Y,N,,150,1600,1520,955,1,59,0,1503,516042,1183,1158
-Kansas,Shawnee County,20177,2,2,2020-10-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,507,,,,97,0,33,0,530,176875,553,757
-Kansas,Washington County,20201,3,2,2020-10-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Kansas,Wyandotte County,20209,2,2,2020-10-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,463,165429,,
-Massachusetts,Barnstable County,25001,2,1,2020-07-21,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,588,20,250,194,0,0,10,0,,,,
-Massachusetts,Berkshire County,25003,2,1,2020-07-21,N,N,N,N,N,N,N,N,Y,Mix,Y,Y,N,Y,N,N,Y,Y,500,22,,132,1,0,17,0,,,232,572
-Massachusetts,Bristol County,25005,1,1,2020-07-21,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,Y,1206,37,,87,101,0,170,0,,,,
-Massachusetts,Dukes County,25007,3,1,2020-07-22,N,N,N,N,N,N,N,N,N,,,,,,,,,,44,,,,,,,,,,,
-Massachusetts,Essex County,25009,1,1,2020-07-22,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,Y,1654,187,1162,15,5,0,0,0,,,1465,1543
-Massachusetts,Franklin County,25011,3,1,2020-07-22,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,Y,N,N,Y,Y,190,12,,139,24,0,20,0,,,,
-Massachusetts,Hampden County,25013,2,1,2020-07-22,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,Y,900,435,1166,851,287,0,131,0,,,1257,1410
-Massachusetts,Hampshire County,25015,2,1,2020-07-23,Y,Y,N,N,N,N,N,Y,Y,Mix,N,N,N,N,N,N,N,Y,248,15,167,107,21,0,6,0,,,234,287
-Massachusetts,Middlesex County,25017,1,1,2020-07-27,Y,Y,N,Y,Y,Y,Y,Y,Y,Releases,N,N,N,N,N,N,N,Y,340,226,788,544,75,0,88,0,,,819,1488
-Massachusetts,Nantucket County,25019,3,1,2020-07-27,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Massachusetts,Norfolk County,25021,1,1,2020-07-27,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,Y,502,70,388,357,223,1,48,0,,,,
-Massachusetts,Plymouth County,25023,1,1,2020-07-27,Y,Y,N,Y,Y,N,N,N,Y,Releases,N,N,N,N,N,N,N,Y,1260,53,,522,211,0,127,0,,,1026,1140
-Massachusetts,Suffolk County,25025,1,1,2020-07-27,Y,Y,N,N,Y,N,N,N,Y,Releases,N,N,N,N,N,N,N,Y,1892,47,,468,70,0,43,0,896,803907,1622,2533
-Massachusetts,Worcester County,25027,1,1,2020-07-27,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,Y,1000,59,,561,61,0,59,0,753,830622,,
-New York,Albany County,36001,2,1,2021-01-21,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,N,N,N,N,1043,,,,138,0,104,0,380,305506,598,1043
-New York,Chautauqua County,36013,2,1,2021-01-21,N,Y,N,N,N,Y,N,N,N,Releases,,,,,,,,,,,,,91,0,25,0,152,126903,273,303
-New York,Chenango County,36017,3,1,2021-01-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,133,,,,,,,,65,47207,,
-New York,Erie County,36029,1,1,2021-01-21,N,Y,N,N,N,Y,N,N,Y,Releases,Y,N,Y,N,Y,N,N,N,638,17,,,200,0,0,0,658,918702,,
-New York,Franklin County,36033,3,1,2021-01-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,120,,,,,,,,61,50022,,
-New York,Genesee County,36037,3,1,2021-01-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,87,,,,,,,,47,57280,,
-New York,New York City (including Kings County),,1,1,2021-01-31,Y,Y,Y,Y,Y,Y,Y,N,Y,,N,N,N,N,N,N,N,N,,,,,,,,,,,,
-New York,Lewis County,36049,3,1,2021-01-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,24,26296,,
-New York,Nassau County,36059,1,1,2021-01-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,166,0,317,0,770,1356924,,
-New York,New York County,36061,1,1,2021-01-31,Y,Y,Y,Y,Y,Y,Y,N,N,,,,,,,,,,,,,,577,3,1718,6,5858,8336817,,
-New York,Oneida County,36065,2,1,2021-01-21,N,Y,N,N,N,Y,N,N,Y,Releases,Y,Y,N,N,N,N,N,N,634,11,,,15,0,44,0,277,228671,,
-New York,Queens County,36081,1,1,2021-01-31,Y,Y,Y,Y,Y,Y,Y,N,Y,Releases,Y,Y,Y,N,N,Y,N,N,,2600,5800,,,,,,,,8223,12125
-New York,Richmond County,36085,2,1,2021-01-31,Y,Y,Y,Y,Y,Y,Y,N,N,,,,,,,,,,,,,,,,,,,,,
-New York,St. Lawrence County,36089,2,1,2021-01-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,65,107740,,
-New York,Sullivan County,36105,3,1,2021-01-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,32,0,14,0,106,75432,,
-Virginia,Arlington County,51013,2,3,2021-02-02,Y,Y,N,Y,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,,81,307,,4,0,36,0,302,236842,468,509
-Virginia,Bristol city,51520,3,3,2021-01-13,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,Y,Y,N,N,N,67,100,173,,,,,,,,,
-Virginia,Buchanan County,51027,3,3,2021-01-27,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Virginia,Fairfax County,51059,1,3,2021-03-05,Y,Y,N,N,Y,N,N,N,N,,,,,,,,,,,,,,34,0,0,1,,,993,1260
-Virginia,Hampton city,51650,2,3,2025-03-05,Y,Y,Y,Y,Y,N,Y,N,N,,,,,,,,,,468,,,,7,0,1,0,,,300,468
-Virginia,Hanover County,51085,2,3,2021-03-05,Y,Y,N,Y,Y,Y,N,N,Y,Releases,Y,N,N,N,Y,N,N,N,519,,6,,289,0,43,0,359,107766,436,519
-Virginia,Martinsville city,51690,3,3,2021-02-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,66,,,,,,,,,,,
-Virginia,Mathews County,51115,3,3,2021-02-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,159,,,,,,,,,,,
-Virginia,Newport News city,51700,2,3,2021-02-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Virginia,Prince Edward County,51147,3,3,2021-02-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,44,0,38,0,,,673,874
-Virginia,Prince William County,51153,2,3,2021-02-01,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,Y,N,Y,Y,N,,150,752,,120,0,79,0,,,841,1040
-Virginia,Pulaski County,51155,3,3,2021-02-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,187,0,0,0,,,803,1183
-Virginia,Richmond city,51760,2,3,2021-02-01,Y,Y,N,Y,Y,N,N,N,N,,,,,,,,,,,,,,233,0,0,0,,,951,1032
-Virginia,Spotsylvania County,51177,2,3,2021-02-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Virginia,Staunton County,,3,3,2021-02-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,396,,,,,,,,,,,
-Montana,Cascade County,30013,3,4,2021-09-17,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,362,29,,,307,0,37,0,419,81366,476,365
-Montana,Lewis and Clark County,30049,3,4,2021-09-17,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,80,,,99,26,0,58,0,118,69432,,
-Montana,Silver Bow County,30093,3,4,2021-09-17,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,72,,,,,,,,82,34915,,
-Montana,Big Horn County,30003,3,4,2021-09-17,N,N,N,N,N,N,N,N,N,,,,,,,,,,60,,,,33,0,0,0,44,13319,,
-Montana,Daniels County,30019,3,4,2021-09-19,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Montana,Gallatin County,30031,2,4,2021-09-19,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,90,100,170,,,,,,,,,
-Montana,Granite County,30039,3,4,2021-09-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,165,,,,,,,,,,,
-Montana,Lake County,30047,3,4,2021-09-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,100,,,,,,,,55,30458,,
-Montana,Lincoln County,30053,3,4,2021-09-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,29,,,,,,,,,,,
-Montana,Madison County,30057,3,4,2021-09-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,72,,,,,,,,,,,
-Montana,Mineral County,30061,3,4,2021-09-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Montana,Missoula County,30063,2,4,2021-09-21,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,394,73,194,188,38,0,3,0,248,119600,361,392
-Montana,Musselshell County,30065,3,4,2021-09-24,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Montana,Petroleum County,30069,3,4,2021-09-24,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Montana,Ravalli County,30081,3,4,2021-09-24,N,N,N,N,N,N,N,N,N,,,,,,,,,,50,,,,,,,,42,43806,,
-Montana,Teton County,30099,3,4,2021-09-25,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Montana,Valley County,30105,3,4,2021-09-25,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,,0,27,,,,,,31,7396,,
-Montana,Yellowstone County,30111,2,4,2021-09-25,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,N,N,N,N,274,70,486,,108,0,23,0,454,161300,,
-Nevada,Carson City,32510,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Nevada,Esmeralda County,32009,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Nevada,Churchill County,32001,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,80,,,,,,,,,,,
-Nevada,Clark County,32003,1,4,2021-03-03,N,N,N,N,N,N,N,N,Y,Releases,Y,Y,N,N,Y,Y,N,N,4000,115,2900,3185,1227,0,379,0,394,2266715,5075,5812
-Nevada,Douglas County,32005,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,98,,,,,,,,,,55,140
-Nevada,Elko County,32007,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,47,0,10,0,,,177,212
-Nevada,Eureka County,32011,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,119,,,,,,,,,,,
-Nevada,Humboldt County,32013,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,84,,,,,,,,,,,
-Nevada,Lander County,32015,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Nevada,Lincoln County,32017,3,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Nevada,Lyon County,32019,3,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Nevada,Mineral County,32021,3,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Nevada,Nye County,32023,3,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,117,0,0,0,,,173,231
-Nevada,Pershing County,32027,3,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,1680,,,,,,,,,,,
-Nevada,Storey County,32029,3,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,,,,,
-Nevada,Washoe County,32031,2,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,162,0,0,0,,,1114,1367
-Nevada,White Pine County,32033,3,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,40,,,,,,,,,,,
+state,county,fips,pop_tier,region,date_checked,source_reports_covid,source_reports,dashboard,testing,cases,population,deaths,releases,news_reports,releases_policy,breakdown,breakdown_parole_violations,breakdown_minor_offenses,breakdown_bail,breakdown_time_left,breakdown_vulnerable,breakdown_other,legal_filing,capacity,wave_1_pop_reduction,wave_1_pop_prior,vera_pop_first,vera_pop_feb20,vera_pop_may20,bjs_pop,bjs_capacity
+Florida,Hillsborough County,12057,1,2,2020-08-03,N,N,N,N,N,N,N,N,Y,Policy,Y,N,N,N,N,N,Y,N,,164,,2794,2799,2346,3032,5011
+Florida,Palm Beach County,12099,1,2,2020-08-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,1651,1651,1481,1907,3164
+Florida,Pinellas County,12103,1,2,2020-07-28,N,N,N,N,N,N,N,N,N,,,,,,,,,,3000,,,2985,2985,2154,2938,2915
+Florida,Baker County,12003,3,2,2020-07-28,N,N,N,N,N,N,N,N,N,,,,,,,,,,500,,,490,490,510,488,512
+Florida,Broward County,12011,1,2,2020-07-28,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,N,N,N,Y,N,1538,2,,3513,3522,3014,3644,5144
+Florida,Clay County,12019,2,2,2020-12-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,480,,,397,410,369,,
+Florida,Flagler County,12035,2,2,2020-07-28,N,N,N,N,N,N,N,N,N,,,,,,,,,,400,,,172,186,164,,
+Florida,Gadsden County,12039,3,2,2020-12-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,157,,,498,498,121,,
+Florida,Jefferson County,12065,3,2,2020-07-28,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,52,51,37,,
+Florida,Martin County,12085,2,2,2020-07-28,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,449,449,384,478,696
+Florida,Miami-Dade County,12086,1,2,2020-07-28,N,N,N,N,N,N,N,N,Y,Policy,Y,N,N,N,N,N,Y,N,,18,,4034,4032,3396,4113,5661
+Florida,Orange County,12095,1,2,2020-08-03,N,Y,N,N,N,Y,N,N,Y,Releases,Y,N,N,N,N,N,Y,N,592,300,,2339,2340,2004,2565,4721
+Florida,Osceola County,12097,2,2,2020-08-03,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,,,,759,758,667,,
+Florida,Pasco County,12101,1,2,2020-08-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,1643,1643,1357,1738,1432
+Florida,Polk County,12105,1,2,2020-08-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,2554,2555,2180,,
+Florida,Sumter County,12119,2,2,2020-08-03,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,521,,,442,430,354,442,527
+Florida,Taylor County,12123,3,2,2020-08-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,126,126,79,,
+Florida,Wakulla County,12129,3,2,2020-08-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,350,,,115,114,78,,
+Louisiana,East Baton Rouge Parish,22033,2,3,2020-10-01,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,Y,N,N,N,N,1600,344,1600,1632,1670,1312,1395,1594
+Louisiana,Jefferson Parish,22051,2,3,2020-08-25,N,N,N,N,N,N,N,N,N,,,,,,,,,,1193,,,1298,1292,912,895,1085
+Louisiana,Lafayette Parish,22055,2,3,2020-08-25,N,N,N,N,N,N,N,N,N,,,,,,,,,,954,,,1861,2022,1312,792,954
+Louisiana,Acadia Parish,22001,3,3,2020-08-25,N,N,N,N,N,N,N,N,N,,,,,,,,,,190,,,178,166,180,,
+Louisiana,Ascension Parish,22005,2,3,2020-09-08,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,Y,N,572,,,503,507,339,,
+Louisiana,Bienville Parish,22013,3,3,2020-09-08,N,N,N,N,N,N,N,N,N,,,,,,,,,,150,,,38,26,29,,
+Louisiana,Calcasieu Parish,22019,2,3,2020-09-08,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,1267,1293,969,1175,1420
+Louisiana,Livingston Parish,22063,2,3,2020-09-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,673,,,939,951,750,671,673
+Louisiana,Orleans Parish,22071,2,3,2020-09-08,Y,Y,Y,Y,Y,N,N,Y,Y,Mix,Y,N,Y,N,N,N,N,N,1438,23,,1071,1044,802,1553,1938
+Louisiana,Pointe Coupee Parish,22077,3,3,2020-09-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,97,,,115,104,73,,
+Louisiana,Rapides Parish,22079,2,3,2020-09-15,N,N,N,N,N,N,N,N,N,,,,,,,,,,328,,,976,865,743,1091,1196
+Louisiana,St. Bernard Parish,22087,3,3,2020-09-12,N,N,N,N,N,N,N,N,N,,,,,,,,,,116,,,212,,,207,266
+Louisiana,St. James Parish,22093,3,3,2020-09-12,N,N,N,N,N,N,N,N,N,,,,,,,,,,396,,,62,68,50,,
+Louisiana,St. Mary Parish,22101,3,3,2020-09-12,N,N,N,N,N,N,N,N,N,,,,,,,,,,320,,,245,250,178,,
+Louisiana,St. Tammany Parish,22103,2,3,2020-09-12,N,N,N,N,N,N,N,N,N,,,,,,,,,,1192,,,944,958,736,1105,1239
+Louisiana,Tangipahoa Parish,22105,2,3,2020-09-10,N,N,N,N,N,N,N,N,N,,,,,,,,,,526,,,615,567,467,,
+Louisiana,Tensas Parish,22107,3,3,2020-12-11,N,N,N,N,N,N,N,N,N,,,,,,,,,,522,,,18,22,18,,
+Louisiana,Union Parish,22111,3,3,2020-09-10,N,N,N,N,N,N,N,N,N,,,,,,,,,,380,,,,,,330,388
+California,Del Norte County,6015,3,4,2020-12-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,142,,,110,110,48,101,105
+California,El Dorado County,6017,2,4,2020-12-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,461,,,389,387,305,396,461
+California,Inyo County,6027,3,4,2020-12-02,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,96,,,39,39,,56,96
+California,Lake County,6033,3,4,2020-12-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,,,,261,261,174,307,286
+California,Los Angeles County,6037,1,4,2020-11-11,Y,Y,Y,N,Y,Y,Y,Y,Y,Mix,Y,N,N,N,Y,N,N,N,19217,3105,17002,17076,17076,11795,17165,21225
+California,Merced County,6047,2,4,2020-11-06,N,N,N,N,N,N,N,N,N,,,,,,,,,,753,,,791,809,653,806,753
+California,Napa County,6055,2,4,2020-10-20,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,N,Y,N,N,N,264,43,235,254,254,183,,
+California,Sacramento County,6067,1,4,2020-10-20,Y,Y,Y,Y,Y,Y,Y,N,Y,Releases,Y,N,N,N,N,N,N,N,4057,1200,,3546,3546,2400,3621,5059
+California,San Bernardino County,6071,1,4,2020-10-19,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,7400,0,,5506,5506,4685,5632,7630
+California,San Joaquin County,6077,1,4,2020-10-19,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,N,N,1550,65,1230,1382,1382,1145,1285,1550
+California,San Luis Obispo County,6079,2,4,2020-10-19,Y,Y,N,N,Y,N,N,N,N,,,,,,,,,,683,,,508,508,368,553,909
+California,San Mateo County,6081,1,4,2020-10-19,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,Y,Y,N,N,1516,858,,974,974,526,996,1360
+California,Sutter County,6101,3,4,2020-10-19,N,N,N,N,N,N,N,N,N,,,,,,,,,,704,,,206,206,152,269,358
+California,Yolo County,6113,2,4,2020-10-19,Y,Y,Y,Y,Y,Y,Y,N,Y,Mix,Y,N,Y,N,Y,Y,N,N,455,20,,315,315,168,364,452
+California,Yuba County,6115,3,4,2020-10-19,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,N,Y,N,N,428,213,427,394,394,255,362,426
+Illinois,Madison County,17119,2,2,2020-07-20,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,312,,300,,,,,
+Illinois,McHenry County,17111,2,2,2020-07-21,N,Y,N,N,N,Y,N,N,Y,,N,N,N,N,N,N,N,N,650,,,208,,208,455,650
+Illinois,Winnebago County,17201,2,2,2020-07-21,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,1324,,,,,,805,1324
+Illinois,Champaign County,17019,2,2,2020-07-21,N,N,N,N,N,N,N,N,Y,Releases,N,N,Y,N,N,Y,N,N,313,,,,,,208,295
+Illinois,Cook County,17031,1,2,2020-07-21,Y,Y,Y,Y,Y,Y,Y,N,Y,Mix,N,N,Y,Y,N,Y,N,N,10000,966,5555,5612,5598,4071,6524,11163
+Illinois,DuPage County,17043,1,2,2020-07-23,N,N,N,N,N,N,N,N,Y,,N,N,N,Y,N,N,Y,N,1000,160,529,,,,574,1056
+Illinois,Hancock County,17067,3,2,2020-07-23,N,N,N,N,N,N,N,N,N,,,,,,,,,,98,,,,,,,
+Illinois,Kane County,17089,1,2,2020-07-26,N,N,N,N,N,N,N,N,Y,Releases,N,N,Y,Y,Y,N,N,N,640,119,499,489,508,341,,
+Illinois,Kendall County,17093,2,2,2020-07-29,N,N,N,N,N,N,N,N,N,,,,,,,,,,203,,,147,161,132,,
+Illinois,Lake County,17097,1,2,2020-08-03,N,N,N,N,N,N,N,N,Y,Releases,N,N,Y,N,Y,N,N,N,740,40,479,,,,525,636
+Illinois,Monroe County,17133,3,2,2020-08-04,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,,,,,,,,
+Illinois,Moultrie County,17139,3,2,2020-08-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,56,,,22,25,19,,
+Illinois,Putnam County,17155,3,2,2020-08-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,5,,,,,,,
+Illinois,Sangamon County,17167,2,2,2020-08-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,314,,,,,,335,314
+Illinois,Schuyler County,17169,3,2,2020-08-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,34,,,,,,,
+Illinois,St. Clair County,17163,2,2,2020-08-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,418,,,294,,310,,
+Illinois,Tazewell County,17179,2,2,2020-08-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,226,,,,,,,
+Illinois,Will County,17197,1,2,2020-08-08,N,N,N,N,N,N,N,N,N,,,,,,,,,,1000,,,708,726,570,650,909
+Michigan,Genesee County,26049,2,2,2020-10-17,Y,Y,N,Y,Y,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,690,70,500,572,572,464,668,580
+Michigan,Kalamazoo County,26077,2,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,Y,Y,Y,N,N,425,200,400,260,,,,
+Michigan,Washtenaw County,26161,2,2,2020-10-17,Y,Y,Y,N,Y,Y,N,Y,Y,Releases,Y,N,N,Y,Y,Y,N,Y,404,151,332,,,,,
+Michigan,Bay County,26017,2,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,Y,N,N,N,249,52,165,165,165,110,205,249
+Michigan,Cass County,26027,3,2,2020-10-17,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Michigan,Cheboygan County,26031,3,2,2020-10-17,N,N,N,N,N,N,N,N,N,,,,,,,,,,103,,,,,,74,83
+Michigan,Houghton County,26061,3,2,2020-10-17,N,N,N,N,N,N,N,N,N,,,,,,,,,,28,,,18,18,15,44,54
+Michigan,Ingham County,26065,2,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,Y,N,Y,N,500,100,,373,373,284,440,444
+Michigan,Kent County,26081,1,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,Y,N,Y,N,1400,165,1100,,,,1123,1477
+Michigan,Leelanau County,26089,3,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,72,,,,,,,
+Michigan,Livingston County,26093,2,2,2020-10-17,N,N,N,N,N,N,N,N,N,,,,,,,,,,411,,,283,283,218,,
+Michigan,Macomb County,26099,1,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,Y,N,Y,N,N,1238,568,862,862,862,460,1161,1201
+Michigan,Manistee County,26101,3,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,Y,Y,N,N,80,4,50,40,40,19,,
+Michigan,Midland County,26111,3,2,2020-10-17,N,N,N,N,N,N,N,N,N,,,,,,,,,,247,,,116,122,68,,
+Michigan,Oakland County,26125,1,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,N,Y,Y,N,1083,325,1283,1282,1282,739,1355,1508
+Michigan,Ottawa County,26139,2,2,2020-10-17,N,N,N,N,N,N,N,N,N,,,,,,,,,,300,,,,,,335,462
+Michigan,Saginaw County,26145,2,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,Y,Y,N,N,513,73,317,368,,275,400,513
+Michigan,Wayne County,26163,1,2,2020-10-17,N,N,N,N,N,N,N,N,Y,Releases,N,N,Y,N,Y,Y,Y,N,,428,1381,1410,1410,853,1874,2951
+Minnesota,Anoka County,27003,2,2,2020-11-02,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,N,N,238,16,,,,,302,478
+Minnesota,Dakota County,27037,2,2,2020-11-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,263,,,231,,72,,
+Minnesota,Wright County,27171,2,2,2020-11-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,288,,,182,174,91,,
+Minnesota,Beltrami County,27007,3,2,2020-11-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,140,,,93,107,62,,
+Minnesota,Carver County,27019,2,2,2020-11-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,,,,23,,27,,
+Minnesota,Cass County,27021,3,2,2020-11-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,60,,,5,,5,,
+Minnesota,Cottonwood County,27033,3,2,2020-11-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,21,,,,,,,
+Minnesota,Hennepin County,27053,1,2,2020-11-02,N,Y,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,N,N,N,N,839,213,815,444,,,1252,1248
+Minnesota,Lac qui Parle County,27073,3,2,2020-11-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,12,,,4,4,0,,
+Minnesota,Mower County,27099,3,2,2020-11-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,128,,,63,62,35,,
+Minnesota,Olmsted County,27109,2,2,2020-11-02,N,Y,N,N,N,Y,N,N,Y,Mix,N,N,N,N,N,N,N,N,292,,,72,,71,,
+Minnesota,Ramsey County,27123,1,2,2020-11-02,N,N,N,N,N,N,N,N,Y,Mix,N,Y,Y,N,N,Y,Y,N,1056,153,393,66,,,702,1056
+Minnesota,Red Lake County,27125,3,2,2020-09-23,N,Y,N,N,N,Y,N,N,Y,Mix,N,N,N,N,N,N,N,N,200,,,,,,,
+Minnesota,Scott County,27139,2,2,2020-09-24,N,Y,N,N,N,Y,N,N,Y,,N,N,N,N,N,N,N,N,264,25,78,118,127,53,,
+Minnesota,St. Louis County,27137,2,2,2020-09-24,N,Y,N,N,N,Y,N,N,Y,Releases,Y,N,Y,N,N,N,N,N,197,59,175,104,,119,90,144
+Minnesota,Stearns County,27145,2,2,2020-09-29,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,135,,,,,,146,159
+Minnesota,Wabasha County,27157,3,2,2020-09-29,N,N,N,N,N,Y,N,N,Y,Mix,N,N,N,N,N,N,N,N,72,12,18,5,,8,,
+Minnesota,Washington County,27163,2,2,2020-09-29,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,N,N,200,,,,,,,
+Pennsylvania,Allegheny County,42003,1,1,2020-08-20,Y,Y,Y,Y,Y,Y,Y,Y,Y,Releases,N,N,N,N,N,N,N,Y,2400,912,2488,2488,2488,1709,2896,3859
+Pennsylvania,Armstrong County,42005,3,1,2020-09-07,N,N,N,N,N,N,N,N,N,,,,,,,,,,158,,,176,176,119,148,158
+Pennsylvania,Beaver County,42007,2,1,2020-08-21,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,376,,,250,250,191,,
+Pennsylvania,Bucks County,42017,1,1,2020-08-21,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,Y,712,250,909,952,952,,1078,1178
+Pennsylvania,Cameron County,42023,3,1,,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,10,,,,
+Pennsylvania,Chester County,42029,1,1,2020-08-22,Y,Y,Y,N,Y,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,912,107,746,746,746,,841,1105
+Pennsylvania,Cumberland County,42041,2,1,2020-08-22,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,N,N,N,Y,N,400,92,,409,,265,,
+Pennsylvania,Delaware County,42045,1,1,2020-08-22,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,Y,1883,493,1880,1387,,,1774,1863
+Pennsylvania,Lackawanna County,42069,2,1,2020-08-22,Y,Y,N,N,Y,N,N,N,N,,,,,,,,,,1200,,,489,,,864,1183
+Pennsylvania,Lawrence County,42073,3,1,2020-08-22,N,N,N,N,N,N,N,N,N,,,,,,,,,,275,,,94,,,208,287
+Pennsylvania,Lycoming County,42081,2,1,2020-08-25,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,Y,255,44,304,247,,240,,
+Pennsylvania,Mercer County,42085,2,1,2020-08-25,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,311,60,308,294,294,171,275,311
+Pennsylvania,Northumberland County,42097,3,1,2020-08-25,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,284,100,248,248,248,201,,
+Pennsylvania,Philadelphia County,42101,1,1,2020-08-25,Y,Y,Y,Y,Y,N,Y,N,Y,Releases,N,N,N,N,N,N,N,Y,,1300,4756,4756,4756,3731,6158,5119
+Tennessee,Hamilton County,47065,2,3,2020-07-20,Y,Y,N,Y,Y,Y,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,1589,480,1484,1513,1512,976,1583,1591
+Tennessee,Sumner County,47165,2,3,2020-07-20,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,Y,Y,N,N,832,252,787,791,790,566,724,832
+Tennessee,Wilson County,47189,2,3,2020-07-20,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,462,132,506,514,513,336,420,462
+Tennessee,Benton County,47005,3,3,2020-08-03,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,140,45,119,107,107,74,79,140
+Tennessee,Bradley County,47011,2,3,2020-08-03,Y,Y,N,Y,Y,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,,207,492,481,481,278,,
+Tennessee,Davidson County,47037,1,3,2020-07-22,Y,Y,N,Y,Y,N,N,Y,Y,Mix,N,N,N,N,N,N,N,N,2038,167,2121,2072,2073,1636,2499,3505
+Tennessee,Hamblen County,47063,3,3,2020-08-05,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,255,146,384,363,363,197,414,255
+Tennessee,Humphreys County,47085,3,3,2020-08-03,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,68,29,97,114,113,68,,
+Tennessee,Knox County,47093,2,3,2020-07-22,N,Y,N,N,N,Y,N,N,Y,Mix,Y,N,Y,Y,N,N,Y,N,1371,533,1458,1415,1395,926,1464,1371
+Tennessee,Lawrence County,47099,3,3,2020-07-22,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,N,N,262,112,285,280,280,174,294,261
+Tennessee,Maury County,47119,3,3,2020-07-22,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,N,N,386,95,301,289,289,206,377,386
+Tennessee,Meigs County,47121,3,3,2020-07-23,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,56,30,80,76,76,50,,
+Tennessee,Montgomery County,47125,2,3,2020-07-23,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,880,125,550,574,575,478,490,736
+Tennessee,Overton County,47133,3,3,2020-07-23,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,143,119,143,151,150,26,,
+Tennessee,Rutherford County,47149,2,3,2020-07-24,Y,Y,N,Y,N,Y,N,Y,Y,Mix,Y,N,N,N,N,N,Y,Y,1272,250,1272,1102,1099,796,930,1283
+Tennessee,Shelby County,47157,1,3,2020-08-13,Y,Y,Y,Y,Y,Y,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,6866,872,4578,4635,4633,3705,4590,6625
+Tennessee,Sullivan County,47163,2,3,2020-08-13,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,619,198,901,933,932,608,756,619
+Tennessee,Williamson County,47187,2,3,2020-08-13,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,Y,N,Y,N,454,277,327,346,345,135,339,454
+Texas,Dallas County,48113,1,3,2020-08-14,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,Y,N,7926,1000,5879,5683,5683,4829,5057,8215
+Texas,Harris County,48201,1,3,2020-08-16,Y,Y,Y,Y,N,Y,N,N,Y,Mix,Y,N,Y,N,N,N,Y,N,10566,1114,9072,9059,9059,7572,8623,10258
+Texas,Tarrant County,48439,1,3,2020-08-16,Y,Y,N,N,Y,Y,N,N,N,,,,,,,,,,5000,,4102,3992,3992,3494,,
+Texas,Travis County,48453,1,3,2020-08-16,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,3167,362,2233,2233,2233,1698,2441,3167
+Texas,Bell County,48027,2,3,2020-08-17,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,706,42,852,858,882,625,797,1175
+Texas,Collin County,48085,1,3,2020-11-15,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,1298,77,1067,1047,1047,931,1010,1298
+Texas,Denton County,48121,1,3,2020-10-01,Y,Y,N,Y,Y,N,Y,N,Y,Mix,N,N,N,N,N,N,N,N,1788,214,1229,1195,1195,950,1188,1495
+Texas,El Paso County,48141,1,3,2020-10-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,2976,,2181,2137,2137,1729,2330,2906
+Texas,Fort Bend County,48157,1,3,2020-10-01,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,1770,62,808,847,847,711,981,1766
+Texas,Gregg County,48183,2,3,2020-10-01,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,916,39,714,739,739,587,697,916
+Texas,Hardin County,48199,3,3,2020-10-01,N,N,N,N,N,N,N,N,Y,Policy,Y,N,Y,N,Y,N,N,N,196,18,142,144,144,108,154,196
+Texas,Harrison County,48203,3,3,2020-10-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,364,,199,204,204,183,,
+Texas,Hidalgo County,48215,1,3,2020-10-01,N,N,N,N,N,N,N,N,Y,Policy,Y,N,Y,N,N,N,N,N,1232,258,1047,1047,1047,829,1055,1232
+Texas,Jefferson County,48245,2,3,2020-10-01,N,Y,N,N,N,Y,N,N,Y,Mix,Y,N,Y,Y,N,N,N,N,1716,322,1117,1016,1016,764,945,1683
+Texas,Knox County,48275,3,3,2020-09-11,N,N,N,N,N,N,N,N,N,,,,,,,,,,14,,8,7,7,4,,
+Texas,Nueces County,48355,2,3,2020-10-01,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,1068,31,933,900,900,786,,
+Texas,Pecos County,48371,3,3,2020-09-11,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,49,6,26,31,31,17,,
+Texas,Shackelford County,48417,3,3,2020-08-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,27,,6,11,11,5,,
+Texas,Wichita County,48485,2,3,2020-08-21,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,624,40,460,460,460,373,,
+Arizona,Apache County,4001,3,4,2020-10-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,150,,,79,,76,,
+Arizona,Cochise County,4003,2,4,2020-10-03,N,N,N,N,N,N,N,N,N,Releases,,,,,,,,,160,100,,229,220,170,,
+Arizona,Coconino County,4005,2,4,2020-10-03,Y,Y,N,Y,Y,Y,N,N,Y,,N,N,N,N,N,N,N,N,477,,,,,,476,623
+Arizona,Gila County,4007,3,4,2020-10-08,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,,,,,,,,
+Arizona,Graham County,4009,3,4,2020-10-11,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,,,,30,,,,
+Arizona,Greenlee County,4011,3,4,2020-10-11,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Arizona,La Paz County,4012,3,4,2020-10-11,N,N,N,N,N,N,N,N,N,Releases,,,,,,,,,90,,,,,,,
+Arizona,Maricopa County,4013,1,4,2020-10-11,Y,Y,Y,Y,Y,N,Y,Y,N,,,,,,,,,,,,,5306,,,7532,10006
+Arizona,Mohave County,4015,2,4,2020-12-04,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,Y,N,1100,,,351,,303,546,688
+Arizona,Navajo County,4017,2,4,2020-12-04,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,350,28,1740,306,,248,269,444
+Arizona,Pima County,4019,1,4,2020-12-04,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,,,,1606,,,1849,2105
+Arizona,Pinal County,4021,2,4,2020-12-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,1503,,,,,,496,1503
+Arizona,Santa Cruz County,4023,3,4,2020-12-04,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,372,,,,,,,
+Arizona,Yavapai County,4025,2,4,2020-12-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,477,,,473,508,398,561,797
+Arizona,Yuma County,4027,2,4,2020-12-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,756,,,356,389,369,453,756
+New Hampshire,Belknap County,33001,3,1,2020-08-22,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,N,N,Y,Y,N,72,3,,64,,63,,
+New Hampshire,Carroll County,33003,3,1,2020-08-22,N,N,N,N,N,N,N,N,N,,,,,,,,,,110,,,,,,,
+New Hampshire,Cheshire County,33005,3,1,2020-08-23,N,N,N,N,N,Y,N,N,Y,Releases,Y,N,N,N,Y,Y,Y,N,173,2,,44,,47,,
+New Hampshire,Coos County,33007,3,1,2020-08-23,N,N,N,N,N,N,N,N,N,,,,,,,,,,61,,,,,,,
+New Hampshire,Grafton County,33009,3,1,2020-08-23,N,N,N,N,N,N,N,N,N,,,,,,,,,,150,,,,,,,
+New Hampshire,Hillsborough County,33011,2,1,2020-08-23,Y,Y,N,N,Y,Y,N,Y,N,,,,,,,,,,,,,,,,417,736
+New Hampshire,Merrimack County,33013,2,1,2020-08-23,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,Y,N,N,,12,,,,,,
+New Hampshire,Rockingham County,33015,2,1,2020-08-23,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,N,Y,N,N,N,124,12,,,,,189,423
+New Hampshire,Strafford County,33017,2,1,2020-08-23,N,N,N,N,N,N,N,N,N,,,,,,,,,,495,,,,,,380,450
+New Hampshire,Sullivan County,33019,3,1,2020-08-23,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+North Dakota,Adams County,38001,3,2,2020-07-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+North Dakota,Benson County,38005,3,2,2020-07-20,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,,,,,,,,
+North Dakota,Burleigh County,38015,3,2,2020-07-20,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,555,,,291,291,184,282,555
+North Dakota,Cass County,38017,2,2,2020-07-21,Y,Y,N,Y,Y,Y,Y,N,Y,Releases,N,N,N,Y,N,N,N,N,,89,276,179,179,87,279,358
+North Dakota,Divide County,38023,3,2,2020-07-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+North Dakota,Grand Forks County,38035,3,2,2020-09-14,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,Y,N,N,N,N,,17,201,,,,205,242
+North Dakota,Grant County,38037,3,2,2020-09-14,N,N,N,N,N,N,N,N,N,,,,,,,,,,154,,,,,,,
+North Dakota,Logan County,38047,3,2,2020-09-14,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+North Dakota,McKenzie County,38053,3,2,2020-09-14,N,N,N,N,N,N,N,N,N,,,,,,,,,,135,,,,,,,
+North Dakota,McLean County,38055,3,2,2020-09-14,N,N,N,N,N,N,N,N,N,,,,,,,,,,29,,,,,,,
+North Dakota,Mercer County,38057,3,2,2020-09-14,N,N,N,N,N,N,N,N,N,,,,,,,,,,52,,,,,,,
+North Dakota,Richland County,38077,3,2,2020-09-14,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,N,N,,47,223,,,,,
+North Dakota,Steele County,38091,3,2,2020-09-14,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+North Dakota,Stutsman County,38093,3,2,2020-09-14,N,Y,N,N,N,Y,N,N,Y,,Y,N,N,Y,N,N,N,N,92,35,70,54,66,42,,
+North Dakota,Walsh County,38099,3,2,2020-09-14,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Oregon,Clackamas County,41005,2,4,2020-11-01,N,Y,N,N,N,Y,N,N,Y,Mix,Y,N,N,N,N,Y,N,N,434,314,466,403,396,137,468,465
+Oregon,Deschutes County,41017,2,4,2020-11-07,N,Y,N,N,N,Y,N,N,Y,Mix,Y,N,Y,N,Y,N,N,N,452,150,300,266,298,142,,
+Oregon,Douglas County,41019,2,4,2020-11-07,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,N,N,283,14,151,162,171,70,217,280
+Oregon,Harney County,41025,3,4,2020-11-08,N,Y,N,N,N,Y,N,N,Y,Mix,N,N,N,N,N,N,N,N,,2,9,8,6,2,,
+Oregon,Hood River County,41027,3,4,2020-11-08,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Oregon,Jefferson County,41031,3,4,2020-11-22,N,N,N,N,N,N,N,N,N,,,,,,,,,,160,,,63,56,37,,
+Oregon,Klamath County,41035,3,4,2020-11-22,N,N,N,N,N,N,N,N,Y,Mix,Y,N,Y,N,N,N,Y,N,144,19,120,142,142,75,,
+Oregon,Lane County,41039,2,4,2020-11-22,Y,Y,N,Y,Y,N,N,Y,N,,,,,,,,,,,,,,,,,
+Oregon,Linn County,41043,2,4,2020-11-22,N,Y,N,N,N,Y,N,N,Y,Mix,N,N,N,N,N,N,N,N,230,92,207,184,206,103,7,12
+Oregon,Marion County,41047,2,4,2020-11-23,N,Y,N,N,N,Y,N,N,Y,Mix,Y,N,N,N,N,N,Y,N,,134,415,499,511,304,,
+Oregon,Multnomah County,41051,1,4,2020-12-02,Y,Y,N,N,N,N,N,Y,Y,Mix,Y,N,Y,Y,Y,Y,N,N,,358,1097,1145,,714,1088,1192
+Oregon,Sherman County,41055,3,4,2020-12-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Oregon,Union County,41061,3,4,2020-12-02,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,37,,,18,,20,,
+Oregon,Wasco County,41065,3,4,2020-12-16,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,150,,,115,122,51,146,160
+Oregon,Washington County,41067,1,4,2020-12-16,N,N,N,N,N,N,N,N,Y,,Y,N,N,N,N,Y,Y,N,,72,890,881,881,474,594,572
+Hawaii,Hawaii County,15001,2,4,2021-01-26,Y,Y,Y,Y,Y,Y,Y,Y,Y,Releases,Y,Y,Y,N,N,N,N,N,226,24,331,,,,,
+Hawaii,Honolulu County,15003,1,4,2021-01-26,Y,Y,Y,Y,Y,Y,Y,Y,Y,Releases,Y,N,Y,N,N,N,N,N,950,127,973,,,,,
+Hawaii,Kauai County,15007,3,4,2021-01-26,Y,Y,Y,Y,Y,Y,Y,Y,Y,Releases,Y,N,Y,N,N,N,N,N,130,10,140,,,,,
+Hawaii,Maui County,15009,2,4,2021-01-26,Y,Y,Y,Y,Y,Y,Y,Y,Y,Releases,N,N,N,N,N,N,N,N,301,46,312,,,,,
+Kentucky,Bullitt County,21029,3,3,2020-11-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,315,,,293,310,166,,
+Kentucky,Christian County,21047,3,3,2020-11-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,652,,,733,781,566,847,707
+Kentucky,Madison County,21151,3,3,2020-11-04,N,N,N,N,N,N,N,N,N,,,,,,,,,,184,,,355,337,239,,
+Kentucky,Boone County,21015,2,3,2020-11-04,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,500,,,427,440,346,590,500
+Kentucky,Butler County,21031,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,36,,,53,51,28,,
+Kentucky,Edmonson County,21061,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Kentucky,Fayette County,21067,2,3,2020-12-01,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,Y,Y,N,N,,48,1150,1280,1262,726,1446,1500
+Kentucky,Fulton County,21075,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,525,29,,509,502,427,408,525
+Kentucky,Grayson County,21085,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,656,642,563,638,518
+Kentucky,Hancock County,21091,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Kentucky,Hardin County,21093,2,3,2020-12-01,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,Y,Y,N,N,648,9,,702,732,577,779,648
+Kentucky,Jackson County,21109,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,141,128,81,,
+Kentucky,Jefferson County,21111,1,3,2020-12-01,Y,Y,Y,Y,Y,Y,N,Y,Y,Mix,N,N,N,N,N,N,N,N,,1200,1800,1788,1892,1232,2375,1793
+Kentucky,Kenton County,21117,2,3,2020-12-01,N,N,N,N,N,N,N,N,Y,Releases,Y,Y,Y,N,N,N,Y,N,650,274,716,767,727,338,690,602
+Kentucky,Pulaski County,21199,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,357,366,194,,
+Kentucky,Rowan County,21205,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,312,332,212,123,78
+Kentucky,Warren County,21227,2,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,562,,,653,710,518,703,562
+Kentucky,Wolfe County,21237,3,3,2020-12-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Kansas,Leavenworth County,20103,3,2,2020-11-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Kansas,Reno County,20155,3,2,2020-11-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,7,5,3,,
+Kansas,Riley County,20161,3,2,2020-11-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,147,,,,,,82,150
+Kansas,Barber County,20007,3,2,2020-11-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Kansas,Brown County,20013,3,2,2021-02-03,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,50,,,11,13,12,,
+Kansas,Butler County,20015,3,2,2021-02-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,230,,,,,,,
+Kansas,Douglas County,20045,2,2,2021-02-09,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,Y,N,N,Y,186,14,151,132,,,,
+Kansas,Hodgeman County,20083,3,2,2021-02-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,8,,,,,,,
+Kansas,Johnson County,20091,1,2,2021-02-21,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,,,,,,,773,1081
+Kansas,Morris County,20127,3,2,2021-02-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Kansas,Ness County,20135,3,2,2021-02-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Kansas,Pawnee County,20145,3,2,2021-02-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,16,,,,,,,
+Kansas,Pratt County,20151,3,2,2021-02-21,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,,,,13,17,8,,
+Kansas,Republic County,20157,3,2,2021-10-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Kansas,Sedgwick County,20173,1,2,2020-10-20,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,N,N,N,Y,N,,150,1600,1503,,,1183,1158
+Kansas,Shawnee County,20177,2,2,2020-10-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,507,,,530,550,360,553,757
+Kansas,Washington County,20201,3,2,2020-10-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Kansas,Wyandotte County,20209,2,2,2020-10-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,463,463,352,,
+Massachusetts,Barnstable County,25001,2,1,2020-07-21,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,588,20,250,,,,,
+Massachusetts,Berkshire County,25003,2,1,2020-07-21,N,N,N,N,N,N,N,N,Y,Mix,Y,Y,N,Y,N,N,Y,Y,500,22,,,,,232,572
+Massachusetts,Bristol County,25005,1,1,2020-07-21,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,Y,1206,37,,,,,,
+Massachusetts,Dukes County,25007,3,1,2020-07-22,N,N,N,N,N,N,N,N,N,,,,,,,,,,44,,,,,,,
+Massachusetts,Essex County,25009,1,1,2020-07-22,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,Y,1654,187,1162,,,,1465,1543
+Massachusetts,Franklin County,25011,3,1,2020-07-22,N,N,N,N,N,N,N,N,Y,Releases,Y,N,N,Y,N,N,Y,Y,190,12,,,,,,
+Massachusetts,Hampden County,25013,2,1,2020-07-22,N,N,N,N,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,Y,900,435,1166,,,,1257,1410
+Massachusetts,Hampshire County,25015,2,1,2020-07-23,Y,Y,N,N,N,N,N,Y,Y,Mix,N,N,N,N,N,N,N,Y,248,15,167,,,,234,287
+Massachusetts,Middlesex County,25017,1,1,2020-07-27,Y,Y,N,Y,Y,Y,Y,Y,Y,Releases,N,N,N,N,N,N,N,Y,340,226,788,,,,819,1488
+Massachusetts,Nantucket County,25019,3,1,2020-07-27,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Massachusetts,Norfolk County,25021,1,1,2020-07-27,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,Y,502,70,388,,,,,
+Massachusetts,Plymouth County,25023,1,1,2020-07-27,Y,Y,N,Y,Y,N,N,N,Y,Releases,N,N,N,N,N,N,N,Y,1260,53,,,,,1026,1140
+Massachusetts,Suffolk County,25025,1,1,2020-07-27,Y,Y,N,N,Y,N,N,N,Y,Releases,N,N,N,N,N,N,N,Y,1892,47,,896,,,1622,2533
+Massachusetts,Worcester County,25027,1,1,2020-07-27,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,Y,1000,59,,753,753,523,,
+New York,Albany County,36001,2,1,2021-01-21,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,N,N,N,N,1043,,,380,379,296,598,1043
+New York,Chautauqua County,36013,2,1,2021-01-21,N,Y,N,N,N,Y,N,N,N,Releases,,,,,,,,,,,,152,152,73,273,303
+New York,Chenango County,36017,3,1,2021-01-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,133,,,65,64,58,,
+New York,Erie County,36029,1,1,2021-01-21,N,Y,N,N,N,Y,N,N,Y,Releases,Y,N,Y,N,Y,N,N,N,638,17,,658,657,526,,
+New York,Franklin County,36033,3,1,2021-01-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,120,,,61,60,47,,
+New York,Genesee County,36037,3,1,2021-01-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,87,,,47,46,35,,
+New York,New York City (including Kings County),,1,1,2021-01-31,Y,Y,Y,Y,Y,Y,Y,N,Y,,N,N,N,N,N,N,N,N,,,,,,,,
+New York,Lewis County,36049,3,1,2021-01-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,24,24,23,,
+New York,Nassau County,36059,1,1,2021-01-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,770,768,622,,
+New York,New York County,36061,1,1,2021-01-31,Y,Y,Y,Y,Y,Y,Y,N,N,,,,,,,,,,,,,5858,5520,3815,,
+New York,Oneida County,36065,2,1,2021-01-21,N,Y,N,N,N,Y,N,N,Y,Releases,Y,Y,N,N,N,N,N,N,634,11,,277,276,242,,
+New York,Queens County,36081,1,1,2021-01-31,Y,Y,Y,Y,Y,Y,Y,N,Y,Releases,Y,Y,Y,N,N,Y,N,N,,2600,5800,,,,8223,12125
+New York,Richmond County,36085,2,1,2021-01-31,Y,Y,Y,Y,Y,Y,Y,N,N,,,,,,,,,,,,,,,,,
+New York,St. Lawrence County,36089,2,1,2021-01-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,65,64,52,,
+New York,Sullivan County,36105,3,1,2021-01-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,106,105,71,,
+Virginia,Arlington County,51013,2,3,2021-02-02,Y,Y,N,Y,N,N,N,N,Y,Mix,N,N,N,N,N,N,N,N,,81,307,302,302,226,468,509
+Virginia,Bristol city,51520,3,3,2021-01-13,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,Y,Y,N,N,N,67,100,173,,,,,
+Virginia,Buchanan County,51027,3,3,2021-01-27,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Virginia,Fairfax County,51059,1,3,2021-03-05,Y,Y,N,N,Y,N,N,N,N,,,,,,,,,,,,,,,,993,1260
+Virginia,Hampton city,51650,2,3,2025-03-05,Y,Y,Y,Y,Y,N,Y,N,N,,,,,,,,,,468,,,,,,300,468
+Virginia,Hanover County,51085,2,3,2021-03-05,Y,Y,N,Y,Y,Y,N,N,Y,Releases,Y,N,N,N,Y,N,N,N,519,,6,359,388,266,436,519
+Virginia,Martinsville city,51690,3,3,2021-02-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,66,,,,,,,
+Virginia,Mathews County,51115,3,3,2021-02-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,159,,,,,,,
+Virginia,Newport News city,51700,2,3,2021-02-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Virginia,Prince Edward County,51147,3,3,2021-02-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,673,874
+Virginia,Prince William County,51153,2,3,2021-02-01,N,N,N,N,N,N,N,N,Y,Mix,Y,N,N,Y,N,Y,Y,N,,150,752,,,,841,1040
+Virginia,Pulaski County,51155,3,3,2021-02-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,803,1183
+Virginia,Richmond city,51760,2,3,2021-02-01,Y,Y,N,Y,Y,N,N,N,N,,,,,,,,,,,,,,,,951,1032
+Virginia,Spotsylvania County,51177,2,3,2021-02-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Virginia,Staunton County,,3,3,2021-02-01,N,N,N,N,N,N,N,N,N,,,,,,,,,,396,,,,,,,
+Montana,Cascade County,30013,3,4,2021-09-17,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,362,29,,419,,373,476,365
+Montana,Lewis and Clark County,30049,3,4,2021-09-17,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,80,,,118,117,84,,
+Montana,Silver Bow County,30093,3,4,2021-09-17,N,Y,N,N,N,Y,N,N,N,,,,,,,,,,72,,,82,,78,,
+Montana,Big Horn County,30003,3,4,2021-09-17,N,N,N,N,N,N,N,N,N,,,,,,,,,,60,,,44,49,28,,
+Montana,Daniels County,30019,3,4,2021-09-19,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Montana,Gallatin County,30031,2,4,2021-09-19,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,90,100,170,,,,,
+Montana,Granite County,30039,3,4,2021-09-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,165,,,,,,,
+Montana,Lake County,30047,3,4,2021-09-20,N,N,N,N,N,N,N,N,N,,,,,,,,,,100,,,55,57,44,,
+Montana,Lincoln County,30053,3,4,2021-09-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,29,,,,,,,
+Montana,Madison County,30057,3,4,2021-09-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,72,,,,,,,
+Montana,Mineral County,30061,3,4,2021-09-21,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Montana,Missoula County,30063,2,4,2021-09-21,N,N,N,N,N,N,N,N,Y,Releases,N,N,N,N,N,N,N,N,394,73,194,248,,259,361,392
+Montana,Musselshell County,30065,3,4,2021-09-24,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Montana,Petroleum County,30069,3,4,2021-09-24,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Montana,Ravalli County,30081,3,4,2021-09-24,N,N,N,N,N,N,N,N,N,,,,,,,,,,50,,,42,47,27,,
+Montana,Teton County,30099,3,4,2021-09-25,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Montana,Valley County,30105,3,4,2021-09-25,N,N,N,N,N,N,N,N,Y,,N,N,N,N,N,N,N,N,,0,27,31,32,19,,
+Montana,Yellowstone County,30111,2,4,2021-09-25,N,N,N,N,N,N,N,N,Y,Releases,Y,N,Y,N,N,N,N,N,274,70,486,454,,367,,
+Nevada,Carson City,32510,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Nevada,Esmeralda County,32009,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Nevada,Churchill County,32001,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,80,,,,,,,
+Nevada,Clark County,32003,1,4,2021-03-03,N,N,N,N,N,N,N,N,Y,Releases,Y,Y,N,N,Y,Y,N,N,4000,115,2900,394,,600,5075,5812
+Nevada,Douglas County,32005,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,98,,,,,,55,140
+Nevada,Elko County,32007,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,177,212
+Nevada,Eureka County,32011,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,119,,,,,,,
+Nevada,Humboldt County,32013,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,84,,,,,,,
+Nevada,Lander County,32015,3,4,2021-03-03,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Nevada,Lincoln County,32017,3,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Nevada,Lyon County,32019,3,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Nevada,Mineral County,32021,3,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Nevada,Nye County,32023,3,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,173,231
+Nevada,Pershing County,32027,3,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,1680,,,,,,,
+Nevada,Storey County,32029,3,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,,
+Nevada,Washoe County,32031,2,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,,,,,,,1114,1367
+Nevada,White Pine County,32033,3,4,2021-03-02,N,N,N,N,N,N,N,N,N,,,,,,,,,,40,,,,,,,

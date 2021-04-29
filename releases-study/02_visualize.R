@@ -1,51 +1,9 @@
-rm(list = ls())
-
 library(behindbarstools)
 library(tidyverse)
 library(janitor)
 library(scales)
 
-# ------------------------------------------------------------------------------
-# Read and clean data 
-# ------------------------------------------------------------------------------
-
-# Read raw data 
-raw <- readxl::read_excel("data/raw/Transparency Study_4.26.21.xlsx")
-
-cleaned <- raw %>% 
-    # Drop long column names 
-    slice(-1) %>% 
-    # Drop duplicates for Erie County and Arlington County 
-    distinct(county, state, .keep_all = TRUE) %>%
-    # Clean discrete columns 
-    mutate(
-        across(c(source_reports:releases, news_reports, releases_policy:breakdown_other, legal_filing), 
-               tolower), 
-        across(c(source_reports:releases, news_reports, breakdown:breakdown_vulnerable, legal_filing),
-               ~ case_when(
-                   str_detect(.x, "yes") | .x %in% c("y", "x") ~ "Y",
-                   TRUE ~ "N")),
-        releases_policy = case_when(
-            str_detect(releases_policy, "releases") ~ "Releases", 
-            str_detect(releases_policy, "policy") ~ "Policy", 
-            str_detect(releases_policy, "mix") ~ "Mix", 
-            TRUE ~ NA_character_), 
-        breakdown_other = ifelse(is.na(breakdown_other) | breakdown_other %in% c("n"), "N", "Y"), 
-        across(c(breakdown:legal_filing), 
-               ~ case_when(
-                   news_reports == "N" ~ NA_character_,
-                   TRUE ~ .x))
-    ) %>% 
-    # Clean numeric variables 
-    mutate(capacity = as.numeric(str_remove(capacity_clean, "-")), 
-           wave_1_pop_reduction = as.numeric(wave_1_pop_reduction_clean), 
-           wave_1_pop_prior = as.numeric(str_remove(wave_1_pop_prior_clean, "N/A"))) %>% 
-    # Clean date
-    mutate(date_checked = janitor::excel_numeric_to_date(as.numeric(date_checked))) %>% 
-    # Create source_reports excluding population
-    mutate(source_reports_covid = ifelse(
-        cases == "N" & testing == "N" & deaths == "N" & releases == "N", "N", "Y"
-        ))
+limited <- read.csv("data/interim/releases-transparency-cleaned.csv", na = "")
 
 # ------------------------------------------------------------------------------
 # Summary stats and crosstabs 
@@ -202,98 +160,6 @@ cleaned %>%
     theme(axis.title.y = element_blank()) + 
     labs(title = "# of counties based on breakdown of releases")
 
-# ------------------------------------------------------------------------------
-# Merge NYT covid data  
-# ------------------------------------------------------------------------------
-
-nyt <- read_csv(stringr::str_c(
-    "https://raw.githubusercontent.com/nytimes/covid-19-data/", 
-    "master/prisons/facilities.csv"))
-
-# TODO: Make sure group_by(sum) makes sense! 
-nyt_ <- nyt %>% 
-    filter(facility_type == "Jail") %>% 
-    group_by(facility_county_fips) %>% 
-    summarise(
-        latest_inmate_population = sum_na_rm(latest_inmate_population), 
-        total_inmate_cases = sum_na_rm(total_inmate_cases), 
-        total_inmate_deaths = sum_na_rm(total_inmate_deaths), 
-        total_officer_cases = sum_na_rm(total_officer_cases), 
-        total_officer_deaths = sum_na_rm(total_officer_deaths)) %>% 
-    ungroup() %>% 
-    mutate(facility_county_fips = as.numeric(facility_county_fips)) 
-    
-fips_ <- cleaned %>% 
-    filter(!county %in% c("New York City (including Kings County)", "Staunton County")) %>% 
-    rowwise() %>% 
-    mutate(fips = usmap::fips(state, county)) %>% 
-    select(state, county, fips) %>% 
-    mutate(fips = as.double(fips))
-
-cleaned_nyt <- cleaned %>% 
-    left_join(fips_, by = c("county", "state")) %>% 
-    left_join(nyt_, by = c("fips" = "facility_county_fips"))
-
-out <- cleaned_nyt %>% 
-    select(state:region, date_checked, 
-           source_reports_covid, 
-           source_reports:releases, news_reports, 
-           releases_policy:breakdown_other, legal_filing, 
-           capacity, wave_1_pop_reduction, wave_1_pop_prior, 
-           fips:total_officer_deaths)
-
-write.csv(out, "data/out/releases-transparency-study-raw.csv", row.names = FALSE, na = "")   
-
-# ------------------------------------------------------------------------------
-# Merge population data  
-# ------------------------------------------------------------------------------
-
-# Merge with Vera jail population data 
-vera <- read_csv(stringr::str_c(
-    "https://raw.githubusercontent.com/vera-institute/", 
-    "jail-population-data/master/jail_population.csv"))
-
-# Get first date from Vera data 
-# TODO: what do we actually want here? 
-vera_earliest <- vera %>% 
-    group_by(fips) %>% 
-    mutate(first = min(date)) %>% 
-    filter(date == first) %>% 
-    select(-first, county_name, state_name)
-
-cleaned_nyt_vera <- cleaned_nyt %>% 
-    left_join(vera_earliest, by = "fips")
-
-# Merge with BJS jail population data 
-# TODO: duplicate FIPS codes 
-bjs <- haven::read_dta("data/raw/37392-0001-Data.dta")
-
-cleaned_nyt_vera_bjs <- cleaned_nyt_vera %>% left_join(
-    bjs %>% 
-        mutate(CNTYCODE = as.double(CNTYCODE)) %>% 
-        group_by(CNTYCODE) %>% 
-        summarise(bjs_ADP = sum_na_rm(ADP), 
-                  bjs_RATED = sum_na_rm(RATED)), 
-    by = c("fips" = "CNTYCODE")) 
-
-# Save cleaned file 
-limited <- cleaned_nyt_vera_bjs %>% 
-    select(state, county, fips, pop_tier, region, date_checked, 
-           source_reports_covid, 
-           source_reports:releases, news_reports, 
-           releases_policy:breakdown_other, legal_filing, 
-           capacity, wave_1_pop_reduction, wave_1_pop_prior, 
-           nyt_latest_pop = latest_inmate_population, 
-           nyt_total_inmate_cases = total_inmate_cases, 
-           nyt_total_inmate_deaths = total_inmate_deaths, 
-           nyt_total_officer_cases = total_officer_cases, 
-           nyt_total_officer_deaths = total_officer_deaths, 
-           vera_jail_population = jail_population, 
-           vera_resident_population = resident_population, 
-           bjs_ADP, bjs_RATED) 
-
-write_csv(limited, "data/interim/releases-transparency-cleaned.csv", na = "")
-    
 # ------------------------------------------------------------------------------
 # More plots 
 # ------------------------------------------------------------------------------
