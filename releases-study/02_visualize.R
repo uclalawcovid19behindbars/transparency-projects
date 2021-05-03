@@ -3,7 +3,16 @@ library(tidyverse)
 library(janitor)
 library(scales)
 
-limited <- read.csv("data/interim/releases-transparency-cleaned.csv", na = "")
+raw <- read.csv("data/interim/releases-transparency-cleaned.csv")
+
+limited <- raw %>% 
+    mutate(
+        Releases = ifelse(releases == "Y" | news_reports == "Y", "Y", "N"), 
+        pop_prior_coalesce = coalesce(wave_1_pop_prior, vera_pop_feb20), 
+        pct_red = coalesce(
+            (wave_1_pop_prior - wave_1_pop_reduction) / wave_1_pop_prior, 
+            (vera_pop_feb20 - vera_pop_may20) / vera_pop_feb20), 
+        covid_rate = nyt_total_inmate_cases / pop_coalesce)
 
 # ------------------------------------------------------------------------------
 # Summary stats and crosstabs 
@@ -16,15 +25,15 @@ get_crosstab <- function(df, metric){
         adorn_pct_formatting()
 }
 
-get_crosstab(cleaned, "pop_tier")
-get_crosstab(cleaned, "region")
-get_crosstab(cleaned, "dashboard")
+get_crosstab(limited, "pop_tier")
+get_crosstab(limited, "region")
+get_crosstab(limited, "dashboard")
 
-cleaned %>% 
+limited %>% 
     tabyl(region, pop_tier)
 
 # ------------------------------------------------------------------------------
-# Plots 
+# Basic crosstab plots  
 # ------------------------------------------------------------------------------
 
 # Crosstab plotting function 
@@ -37,11 +46,11 @@ get_plot <- function(df, group_var, pct_var) {
         summarise(n = n()) %>% 
         pivot_wider(names_from = !!sym(pct_var), values_from = n) %>% 
         mutate(pct = Y / sum(N, Y)) %>% 
-        ggplot(aes(x = fct_rev(!!sym(group_var)), y = pct, 
+        ggplot(aes(x = fct_rev(as.factor(!!sym(group_var))), y = pct, 
                    label = paste0(percent(pct, accuracy = 1), " (n = ", Y, ")"))) + 
         geom_point(size = 4.0, color = "#4C6788") + 
-        geom_segment(aes(x = fct_rev(!!sym(group_var)), 
-                         xend = fct_rev(!!sym(group_var)), 
+        geom_segment(aes(x = fct_rev(as.factor(!!sym(group_var))), 
+                         xend = fct_rev(as.factor(!!sym(group_var))), 
                          y = 0, 
                          yend = pct), 
                      size = 2.0, color = "#4C6788") + 
@@ -53,15 +62,15 @@ get_plot <- function(df, group_var, pct_var) {
 }
 
 # Pertinent data by tier 
-get_plot(cleaned, "pop_tier", "source_reports_covid") + 
+get_plot(limited, "pop_tier", "source_reports_covid") + 
     labs(title = "% of counties with source reporting data by population tier")
 
 # Pertinent data by region 
-get_plot(cleaned, "region", "source_reports_covid") + 
+get_plot(limited, "region", "source_reports_covid") + 
     labs(title = "% of counties with source reporting data by region")
 
 # Pertinent data by metric 
-cleaned %>% 
+limited %>% 
     select(dashboard:releases) %>% 
     pivot_longer(cols = c(dashboard:releases), names_to = "metric", values_to = "value") %>% 
     group_by(metric, value) %>% 
@@ -85,12 +94,8 @@ cleaned %>%
           legend.position = "top") + 
     labs(title = "% of all counties with source reporting data")
 
-# ------------------------------------------------------------------------------
-# Summary plots 
-# ------------------------------------------------------------------------------
-
 # Pertinent data by metric and tier 
-cleaned %>% 
+limited %>% 
     select(pop_tier, dashboard:releases) %>% 
     pivot_longer(cols = c(dashboard:releases), names_to = "metric", values_to = "value") %>% 
     group_by(pop_tier, metric, value) %>% 
@@ -112,7 +117,7 @@ cleaned %>%
     labs(title = "% of counties with source reporting data by population tier")
 
 # Pertinent data by metric and region 
-cleaned %>% 
+limited %>% 
     select(region, dashboard:releases) %>% 
     pivot_longer(cols = c(dashboard:releases), names_to = "metric", values_to = "value") %>% 
     group_by(region, metric, value) %>% 
@@ -133,8 +138,8 @@ cleaned %>%
           legend.position = "top") + 
     labs(title = "% of counties with source reporting data by region")
 
-# Releases breakdown plot 
-cleaned %>% 
+# Releases breakdown  
+limited %>% 
     select(county, state, starts_with("breakdown")) %>% 
     pivot_longer(cols = starts_with("breakdown_"), names_to = "breakdown_cat", values_to = "value") %>% 
     group_by(breakdown_cat, value) %>% 
@@ -161,35 +166,152 @@ cleaned %>%
     labs(title = "# of counties based on breakdown of releases")
 
 # ------------------------------------------------------------------------------
-# More plots 
+# Legal filings plots  
 # ------------------------------------------------------------------------------
 
-# Reporting pertinent data boxplots 
-cleaned_nyt_vera_bjs %>% 
-    ggplot(aes(x = source_reports, y = resident_population, fill = source_reports)) + 
-    geom_boxplot() +
+# Stacked baraplot 
+limited %>% 
+    group_by(pop_tier, source_reports_covid, legal_filing) %>% 
+    summarise(n()) %>% 
+    mutate(cat = str_c("Source reports: ", source_reports_covid, "\nLegal filing: ", legal_filing)) %>% 
+    ggplot(aes(fill = cat, x = as.factor(pop_tier), y = `n()`)) + 
+    geom_bar(position = "stack", stat = "identity", width = 0.7) + 
+    theme_behindbars(base_size = 16, base_color = "black") + 
+    theme(legend.position = "bottom", 
+          legend.title = element_blank()) + 
+    guides(fill = guide_legend(reverse = TRUE)) + 
     scale_fill_bbdiscrete() + 
-    scale_color_bbdiscrete() + 
-    theme_behindbars(base_size = 16, base_color = "black") + 
-    theme(legend.position = "none") + 
-    labs(title = "Reporting Pertinent Data by Overall County Population", 
-         y = "Overall County Population") + 
-    scale_y_continuous(label = comma)
+    labs(title = "Reporting and legal filings by population tier", 
+         y = "Number of counties") 
 
-# Wave 1 scatterplot 
-ggplot() + 
-    geom_jitter(
-        cleaned_pop, 
-        mapping = aes(x = wave_1_pop_prior, y = wave_1_pop_reduction), size = 1.0) + 
-    ggrepel::geom_text_repel(
-        size = 5, 
-        cleaned_pop %>% filter(wave_1_pop_reduction > 1000), 
-        mapping = aes(x = wave_1_pop_prior, y = wave_1_pop_reduction, label = county)) + 
-    geom_abline(slope = 0.2, linetype = "dashed") + 
-    scale_x_continuous(label = comma) + 
-    scale_y_continuous(label = comma) + 
+# Facet barplot 
+limited %>% 
+    group_by(pop_tier, source_reports_covid, legal_filing) %>% 
+    summarise(n()) %>% 
+    mutate(pop_tier = str_c("Tier ", pop_tier)) %>% 
+    mutate(cat = str_c("Source reports: ", source_reports_covid, "\nLegal filing: ", legal_filing)) %>% 
+    ggplot(aes(x = fct_rev(as.factor(cat)), y = `n()`, fill = cat, label = `n()`)) + 
+    geom_bar(position = "stack", stat = "identity", width = 0.7) + 
+    geom_text(size = 4, vjust = -1, hjust = -0.7, color = "black", family = "Helvetica") +
+    facet_wrap(~pop_tier) + 
+    coord_flip() + 
+    scale_fill_bbdiscrete() + 
+    scale_y_continuous(limits = c(0, 200), breaks = c(0, 100, 200)) + 
     theme_behindbars(base_size = 16, base_color = "black") + 
-    theme(axis.title.x = element_text(color = "black")) + 
-    labs(title = "Jail Releases by County: Wave 1 (Feb 28, 2020 - Oct 31, 2020)", 
-         x = "Population Prior to Releases", 
-         y = "Overall Population Reduction /\nTotal Number of Releases")
+    theme(axis.title.y = element_blank(), 
+          legend.position = "none") +
+    labs(title = "Reporting and legal filings by population tier", 
+         y = "Number of counties") 
+
+# ------------------------------------------------------------------------------
+# COVID rates plots 
+# ------------------------------------------------------------------------------
+
+log_scatter <- function(df, x_var, y_var, color_var){
+    df %>% 
+        ggplot(aes(x = !!sym(x_var), y = !!sym(y_var), color = !!sym(color_var))) + 
+        geom_point(size = 1.0, alpha = 0.8) + 
+        scale_color_bbdiscrete() + 
+        theme_behindbars(base_size = 16, base_color = "black") + 
+        theme(axis.title.y = element_text(color = "black"),
+              axis.title.x = element_text(color = "black"),
+              legend.position = "top") + 
+        scale_x_continuous(trans = "log", label = comma) +
+        scale_y_continuous(trans = "log", label = comma) 
+}
+
+limited %>% 
+    arrange(source_reports_covid) %>% 
+    rename("Source reports pertinent data" = source_reports_covid) %>% 
+    log_scatter(., "pop_coalesce", "nyt_total_inmate_cases", "Source reports pertinent data") + 
+    labs(x = "Total jail population (log)", 
+         y = "Total cases (log)", 
+         title = "Relationship between reporting and COVID rates") 
+
+limited %>% 
+    arrange(desc(Releases)) %>% 
+    log_scatter(., "pop_coalesce", "nyt_total_inmate_cases", "Releases") + 
+    labs(x = "Total jail population (log)", 
+         y = "Total cases (log)", 
+         title = "Relationship between releases and COVID rates") 
+
+# Reporting pertinent data boxplots 
+boxplot <- function(df, x_var, y_var){
+    df %>% 
+        ggplot(aes(x = !!sym(x_var), y = !!sym(y_var), fill = !!sym(x_var))) + 
+        geom_boxplot() +
+        scale_fill_bbdiscrete() + 
+        scale_y_continuous(label = percent) + 
+        theme_behindbars(base_size = 16, base_color = "black") + 
+        theme(legend.position = "none", 
+              axis.title.x = element_text(color = "black"))
+}
+
+limited %>% 
+    filter(covid_rate < 1) %>% 
+    boxplot(., "source_reports_covid", "covid_rate") + 
+    labs(title = "Relationship between reporting and COVID rates", 
+         x = "Source reports pertinent data", 
+         y = "Cumulative infection rate") 
+
+limited %>% 
+    filter(covid_rate < 1) %>% 
+    boxplot(., "Releases", "covid_rate") + 
+    labs(title = "Relationship between releases and COVID rates", 
+         x = "Releases", 
+         y = "Cumulative infection rate") 
+
+# ------------------------------------------------------------------------------
+# Population plots 
+# ------------------------------------------------------------------------------
+
+limited %>% 
+    boxplot(., "Releases", "pop_coalesce") + 
+    scale_y_continuous(trans = "log", label = comma) + 
+    labs(title = "Relationship between releases and population", 
+         x = "Releases", 
+         y = "County jail population (log)")
+
+limited %>% 
+    rename("Source reports pertinent data" = source_reports_covid) %>% 
+    boxplot(., "Source reports pertinent data", "pop_coalesce") + 
+    scale_y_continuous(trans = "log", label = comma) + 
+    labs(title = "Relationship between reporting and population", 
+         x = "Source reports pertinent data", 
+         y = "County jail population (log)")
+
+# ------------------------------------------------------------------------------
+# Population reduction plots 
+# ------------------------------------------------------------------------------
+
+limited %>% 
+    boxplot(., "Releases", "pct_red") + 
+    labs(title = "Relationship between population reduction and releases", 
+         x = "Releases", 
+         y = "Wave 1 (Feb-May) reduction")
+
+limited %>% 
+    rename("Source reports pertinent data" = source_reports_covid) %>% 
+    boxplot(., "Source reports pertinent data", "pct_red") + 
+    labs(title = "Relationship between reduction and reporting", 
+         x = "Source reports pertinent data", 
+         y = "Wave 1 (Feb-May) reduction")
+
+limited %>% 
+    arrange(source_reports_covid) %>% 
+    rename("Source reports pertinent data" = source_reports_covid) %>% 
+    log_scatter(., "pop_prior_coalesce", "pct_red", "Source reports pertinent data") + 
+    scale_x_continuous(trans = "log", label = comma) +
+    scale_y_continuous(label = percent) + 
+    labs(x = "Prior jail population (log)", 
+         y = "Wave 1 (Feb-May) reduction", 
+         title = "Relationship between reduction and reporting") 
+
+limited %>% 
+    arrange(source_reports_covid) %>% 
+    log_scatter(., "pop_prior_coalesce", "pct_red", "Releases") + 
+    scale_x_continuous(trans = "log", label = comma) +
+    scale_y_continuous(label = percent) + 
+    labs(x = "Prior jail population (log)", 
+         y = "Wave 1 (Feb-May) reduction", 
+         title = "Relationship between reduction and releases") 

@@ -31,7 +31,7 @@ cleaned <- raw %>%
             str_detect(releases_policy, "mix") ~ "Mix", 
             TRUE ~ NA_character_), 
         breakdown_other = ifelse(is.na(breakdown_other) | breakdown_other %in% c("n"), "N", "Y"), 
-        across(c(breakdown:legal_filing), 
+        across(c(breakdown:date_published), 
                ~ case_when(
                    news_reports == "N" ~ NA_character_,
                    TRUE ~ .x))
@@ -44,7 +44,9 @@ cleaned <- raw %>%
     mutate(date_checked = janitor::excel_numeric_to_date(as.numeric(date_checked))) %>% 
     # Create source_reports excluding population
     mutate(source_reports_covid = ifelse(
-        cases == "N" & testing == "N" & deaths == "N" & releases == "N", "N", "Y"))
+        cases == "N" & testing == "N" & deaths == "N" & releases == "N", "N", "Y")) %>% 
+    # Replace Staunton County
+    mutate(county = ifelse(county == "Staunton County", "Staunton City", county)) 
 
 # ------------------------------------------------------------------------------
 # Merge NYT COVID data  
@@ -59,16 +61,16 @@ nyt_ <- nyt %>%
     filter(facility_type == "Jail") %>% 
     group_by(facility_county_fips) %>%
     summarise(
-        latest_inmate_population = sum_na_rm(latest_inmate_population), 
-        total_inmate_cases = sum_na_rm(total_inmate_cases), 
-        total_inmate_deaths = sum_na_rm(total_inmate_deaths), 
-        total_officer_cases = sum_na_rm(total_officer_cases), 
-        total_officer_deaths = sum_na_rm(total_officer_deaths)) %>% 
+        nyt_latest_inmate_population = sum_na_rm(latest_inmate_population), 
+        nyt_total_inmate_cases = sum_na_rm(total_inmate_cases), 
+        nyt_total_inmate_deaths = sum_na_rm(total_inmate_deaths), 
+        nyt_total_officer_cases = sum_na_rm(total_officer_cases), 
+        nyt_total_officer_deaths = sum_na_rm(total_officer_deaths)) %>% 
     ungroup() %>% 
     mutate(facility_county_fips = as.numeric(facility_county_fips)) 
 
 fips_ <- cleaned %>% 
-    filter(!county %in% c("New York City (including Kings County)", "Staunton County")) %>% 
+    filter(!county %in% c("New York City (including Kings County)")) %>% 
     rowwise() %>% 
     mutate(fips = usmap::fips(state, county)) %>% 
     select(state, county, fips) %>% 
@@ -91,8 +93,7 @@ vera_first <- vera %>%
     group_by(fips) %>% 
     mutate(first = min(date)) %>% 
     filter(date == first) %>% 
-    select(fips, 
-           vera_pop_first = jail_population)
+    select(fips, vera_pop_first = jail_population)
 
 # Feb20 population  
 vera_feb20 <- vera %>% 
@@ -100,8 +101,7 @@ vera_feb20 <- vera %>%
     group_by(fips) %>% 
     mutate(first = min(date)) %>% 
     filter(date == first) %>% 
-    select(fips, 
-           vera_pop_feb20 = jail_population)
+    select(fips, vera_pop_feb20 = jail_population)
 
 # May20 population 
 vera_may20 <- vera %>% 
@@ -109,8 +109,7 @@ vera_may20 <- vera %>%
     group_by(fips) %>% 
     mutate(first = min(date)) %>% 
     filter(date == first) %>% 
-    select(fips, 
-           vera_pop_may20 = jail_population)
+    select(fips, vera_pop_may20 = jail_population)
 
 vera_combined <- vera_first %>% 
     full_join(vera_feb20, by = "fips") %>% 
@@ -145,6 +144,12 @@ limited <- cleaned_nyt_vera_bjs %>%
            source_reports:releases, news_reports, 
            releases_policy:breakdown_other, legal_filing, 
            capacity, wave_1_pop_reduction, wave_1_pop_prior, 
-           starts_with("nyt_"), starts_with("vera_"), starts_with("bjs_"))
+           starts_with("nyt_"), starts_with("vera_"), starts_with("bjs_")) %>% 
+    mutate(fips = stringr::str_pad(fips, 5, pad = "0")) %>% 
+    mutate(pop_coalesce = coalesce(wave_1_pop_prior, 
+                                   vera_pop_feb20, 
+                                   vera_pop_first, 
+                                   nyt_latest_inmate_population, 
+                                   bjs_pop)) 
 
 write_csv(limited, "data/interim/releases-transparency-cleaned.csv", na = "")
