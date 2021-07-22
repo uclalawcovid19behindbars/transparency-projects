@@ -1,0 +1,96 @@
+---
+title: "Releases/Grassroots data join"
+author: "Hope Johnson"
+date: "7/20/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(googlesheets4)
+library(behindbarstools)
+library(tidycensus)
+library(glue)
+data_path <- file.path("~", "UCLA", "code", "grassroots", "data")
+```
+
+## Read in data
+
+First, read and lightly clean grassroots tab data: 
+
+```{r}
+## load fips codes data
+force(data(fips_codes))
+head(fips_codes)
+state_codes <- fips_codes %>%
+  group_by(state) %>%
+  summarise(state_code = first(state_code))
+
+grassroots_dat <- "1X6uJkXXS-O6eePLxw2e4JeRtM41uPZ2eRcOA_HkPVTk" %>%
+  googlesheets4::read_sheet(sheet = "Grassroots and Other COVID-19 Organizing Efforts",
+                            col_types = "ccccccccccccccccccccccccc") 
+
+grassroots_efforts_out <- grassroots_dat %>%
+  ## filter down to release-focused efforts
+  filter(!is.na(`Effort for Immediate or Accelerated Releases`)) %>%
+  ## if date span, grab the first date
+  mutate(Date = sub("(^[^-]+)-.*", "\\1", `Date (of action)`),
+         Date = lubridate::mdy(Date),
+         state = stringr::str_to_title(`State/Territory`),
+         state_short = behindbarstools::translate_state(state, reverse = TRUE),
+         county = glue('{stringr::str_to_title(County)} County')) %>%
+  ## get state fips code, even if county = "STATEWIDE" 
+  left_join(state_codes, by = c("state_short" = "state")) %>%
+  ## get county fips 
+  left_join(fips_codes, by = c("state_code", "county")) %>%
+  mutate(county_code = ifelse(County == "Statewide", '000', county_code),
+          FIPS = glue('{state_code}{county_code}'))
+```
+
+Next, read and lightly clean releases tab data: 
+
+```{r}
+releases_jail_dat <- "1X6uJkXXS-O6eePLxw2e4JeRtM41uPZ2eRcOA_HkPVTk" %>%
+  googlesheets4::read_sheet(sheet = "COVID-19 Related Jail Releases",
+                            col_types = "ccccccccccccccccccccccc") 
+
+releases_jails_cln <- releases_jail_dat %>%
+  filter(!is.na(County)) %>%
+  mutate(wave1_pop_prerelease = `Wave 1 (Feb 28, 2020 - Oct 31, 2020):\nPopulation Prior to Releases`,
+         wave1_releases = `Wave 1 (Feb 28, 2020 - Oct 31, 2020):\nOverall Pop. Reduction/\nTotal Number of Releases`,
+         wave2_pop_prerelease = `Wave 2 (Nov 1, 2020, and on): Population Prior to Releases`,
+         wave2_releases = `Wave 2 (Nov 1, 2020, and on):\nOverall Pop. Reduction / \nTotal Number of Releases`,
+         entity = `Facility/Facilities`,
+         Date = lubridate::mdy(Date),
+         FIPS = stringr::str_pad(FIPS, 5, "left", pad = "0")) %>%
+  mutate(statewide = str_detect(entity, "(?i)state-wide|statewide"),
+         state_short = behindbarstools::translate_state(State, reverse = TRUE),
+         county_temp = glue('{County} County')) %>%
+  left_join(state_codes, by = c("state_short" = "state")) %>%
+  ## fill in missing state-wide FIPS 
+  mutate(FIPS = ifelse(statewide, glue('{state_code}000'), FIPS)) %>%
+  ## fill in missing county fips codes
+  left_join(fips_codes, by = c("state_code" = "state_code", 
+                               "county_temp" = "county")) %>%
+  mutate(FIPS = ifelse(is.na(FIPS) & !is.na(county_code),
+                       glue('{state_code}{county_code}'),
+                       FIPS)) %>%
+  select(Date,
+         State, County, FIPS, 
+         entity,
+         starts_with("wave1"),
+         starts_with("wave2")
+         ) 
+```
+Now, merge the two datasets!
+
+```{r}
+merged <- releases_jails_cln %>%
+  full_join(grassroots_efforts_out, by = "FIPS")
+
+## 57 overlapping counties 
+merged %>% 
+  filter(!is.na(County.x) & !is.na(Source)) %>% 
+  nrow()
+```
