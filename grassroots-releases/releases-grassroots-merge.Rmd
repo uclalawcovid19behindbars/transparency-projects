@@ -2,27 +2,30 @@
 title: "Releases/Grassroots data join"
 author: "Hope Johnson"
 date: "7/20/2021"
-output: html_document
+output:
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(googlesheets4)
 library(behindbarstools)
 library(tidycensus)
 library(glue)
+library(usmap)
 data_path <- file.path("~", "UCLA", "code", "grassroots", "data")
 ```
 
-## Read in data
+## Read, clean grassroots and releases data tabs
 
 First, read and lightly clean grassroots tab data: 
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 ## load fips codes data
 force(data(fips_codes))
-head(fips_codes)
 state_codes <- fips_codes %>%
   group_by(state) %>%
   summarise(state_code = first(state_code))
@@ -45,22 +48,25 @@ grassroots_efforts_out <- grassroots_dat %>%
   ## get county fips 
   left_join(fips_codes, by = c("state_code", "county")) %>%
   mutate(county_code = ifelse(County == "Statewide", '000', county_code),
-          FIPS = glue('{state_code}{county_code}'))
+         fips = glue('{state_code}{county_code}'),
+         release_effort = 1)
 ```
 
 Next, read and lightly clean releases tab data: 
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 releases_jail_dat <- "1X6uJkXXS-O6eePLxw2e4JeRtM41uPZ2eRcOA_HkPVTk" %>%
   googlesheets4::read_sheet(sheet = "COVID-19 Related Jail Releases",
                             col_types = "ccccccccccccccccccccccc") 
 
 releases_jails_cln <- releases_jail_dat %>%
   filter(!is.na(County)) %>%
-  mutate(wave1_pop_prerelease = `Wave 1 (Feb 28, 2020 - Oct 31, 2020):\nPopulation Prior to Releases`,
-         wave1_releases = `Wave 1 (Feb 28, 2020 - Oct 31, 2020):\nOverall Pop. Reduction/\nTotal Number of Releases`,
-         wave2_pop_prerelease = `Wave 2 (Nov 1, 2020, and on): Population Prior to Releases`,
-         wave2_releases = `Wave 2 (Nov 1, 2020, and on):\nOverall Pop. Reduction / \nTotal Number of Releases`,
+  mutate(wave1_pop_prerelease = as.numeric(`Wave 1 (Feb 28, 2020 - Oct 31, 2020):\nPopulation Prior to Releases`),
+         wave1_releases = as.numeric(`Wave 1 (Feb 28, 2020 - Oct 31, 2020):\nOverall Pop. Reduction/\nTotal Number of Releases`),
+         wave1_pchange = (wave1_pop_prerelease - wave1_releases)/wave1_pop_prerelease,
+         wave2_pop_prerelease = as.numeric(`Wave 2 (Nov 1, 2020, and on): Population Prior to Releases`),
+         wave2_releases = as.numeric(`Wave 2 (Nov 1, 2020, and on):\nOverall Pop. Reduction / \nTotal Number of Releases`),
+         wave2_pchange = (wave2_pop_prerelease - wave2_releases)/wave2_pop_prerelease,
          entity = `Facility/Facilities`,
          Date = lubridate::mdy(Date),
          FIPS = stringr::str_pad(FIPS, 5, "left", pad = "0")) %>%
@@ -73,11 +79,11 @@ releases_jails_cln <- releases_jail_dat %>%
   ## fill in missing county fips codes
   left_join(fips_codes, by = c("state_code" = "state_code", 
                                "county_temp" = "county")) %>%
-  mutate(FIPS = ifelse(is.na(FIPS) & !is.na(county_code),
+  mutate(fips = ifelse(is.na(FIPS) & !is.na(county_code),
                        glue('{state_code}{county_code}'),
                        FIPS)) %>%
   select(Date,
-         State, County, FIPS, 
+         State, County, fips, 
          entity,
          starts_with("wave1"),
          starts_with("wave2")
@@ -85,12 +91,87 @@ releases_jails_cln <- releases_jail_dat %>%
 ```
 Now, merge the two datasets!
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 merged <- releases_jails_cln %>%
-  full_join(grassroots_efforts_out, by = "FIPS")
+  full_join(grassroots_efforts_out, by = "fips")
 
 ## 57 overlapping counties 
 merged %>% 
   filter(!is.na(County.x) & !is.na(Source)) %>% 
   nrow()
 ```
+## Map data
+
+Mapping releases!
+
+```{r, message=FALSE, warning=FALSE}
+plot_usmap(
+    data = releases_jails_cln, values = "wave1_releases",color = "gray"
+  ) + 
+  scale_fill_continuous(
+    low = "blue", high = "red", name = "Wave 1 Releases"
+  ) + 
+  theme(legend.position = "right")
+
+
+plot_usmap(
+    data = releases_jails_cln, values = "wave1_pchange",color = "gray"
+  ) + 
+  scale_fill_continuous(
+    low = "blue", high = "red", name = "Wave 1 Releases (% of population released)", label = scales::percent
+  ) + 
+  theme(legend.position = "right")
+```
+
+Mapping grassroots organizing efforts
+
+```{r, message=FALSE, warning=FALSE}
+plot_usmap(
+    data = grassroots_efforts_out, values = "release_effort",color = "gray"
+  ) + 
+  scale_fill_continuous(
+    low = "blue", high = "red", name = "Release-related Grassroots Organizing Effort"
+  ) + 
+  theme(legend.position = "right")
+```
+
+Filter to California only for both maps: 
+
+```{r, message=FALSE, warning=FALSE}
+plot_usmap(
+    data = releases_jails_cln, values = "wave1_pchange",color = "gray", include = "CA"
+  ) + 
+  scale_fill_continuous(
+    low = "blue", high = "red", name = "Wave 1 Releases (% of population released)", label = scales::percent
+  ) + 
+  theme(legend.position = "right")
+
+plot_usmap(
+    data = grassroots_efforts_out, values = "release_effort",color = "gray", include = "CA"
+  ) + 
+  scale_fill_continuous(
+    low = "blue", high = "red", name = "Release-related Grassroots Organizing Effort"
+  ) + 
+  theme(legend.position = "right")
+```
+
+Filter to West Coast only for both maps: 
+
+```{r, message=FALSE, warning=FALSE}
+plot_usmap(
+    data = releases_jails_cln, values = "wave1_pchange",color = "gray", include = c("CA", "OR", "WA")
+  ) + 
+  scale_fill_continuous(
+    low = "blue", high = "red", name = "Wave 1 Releases (% of population released)", label = scales::percent
+  ) + 
+  theme(legend.position = "right")
+
+plot_usmap(
+    data = grassroots_efforts_out, values = "release_effort",color = "gray", include = c("CA", "OR", "WA")
+  ) + 
+  scale_fill_continuous(
+    low = "blue", high = "red", name = "Release-related Grassroots Organizing Effort"
+  ) + 
+  theme(legend.position = "right")
+```
+
