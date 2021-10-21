@@ -5,7 +5,8 @@ library(scales)
 library(urbnmapr)
 
 limited <- read.csv("data/interim/releases-transparency-cleaned.csv") %>% 
-    mutate(fips = as.character(fips))
+    mutate(fips = as.character(fips)) %>% 
+    mutate(fips = stringr::str_pad(fips, 5, pad = "0"))
 
 joined <- urbnmapr::counties %>% 
     left_join(limited, by = c("county_fips" = "fips"))

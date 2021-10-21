@@ -10,8 +10,11 @@ library(scales)
 # ------------------------------------------------------------------------------
 
 # Read raw data 
-raw <- readxl::read_excel("data/raw/Transparency Study_4.26.21.xlsx")
-
+raw <- googlesheets4::read_sheet(
+    "1sgVo2Wv6EOyjGlKrDjZhwVq6g1HgxAw4VhBNJpTHuXA", 
+    sheet = "Transparency Study", 
+    col_types = "c")
+ 
 cleaned <- raw %>% 
     # Drop long column names 
     slice(-1) %>% 
@@ -26,20 +29,20 @@ cleaned <- raw %>%
                    str_detect(.x, "yes") | .x %in% c("y", "x") ~ "Y",
                    TRUE ~ "N")),
         releases_policy = case_when(
-            str_detect(releases_policy, "releases") ~ "Releases", 
-            str_detect(releases_policy, "policy") ~ "Policy", 
-            str_detect(releases_policy, "mix") ~ "Mix", 
-            TRUE ~ NA_character_), 
-        breakdown_other = ifelse(is.na(breakdown_other) | breakdown_other %in% c("n"), "N", "Y"), 
-        across(c(breakdown:date_published), 
+            str_detect(releases_policy, "releases") ~ "Releases",
+            str_detect(releases_policy, "policy") ~ "Policy",
+            str_detect(releases_policy, "mix") ~ "Mix",
+            TRUE ~ NA_character_),
+        breakdown_other = ifelse(is.na(breakdown_other) | breakdown_other %in% c("n"), "N", "Y"),
+        across(c(breakdown:date_published),
                ~ case_when(
                    news_reports == "N" ~ NA_character_,
                    TRUE ~ .x))
     ) %>% 
     # Clean numeric variables 
-    mutate(capacity = as.numeric(str_remove(capacity_clean, "-")), 
-           wave_1_pop_reduction = as.numeric(wave_1_pop_reduction_clean), 
-           wave_1_pop_prior = as.numeric(str_remove(wave_1_pop_prior_clean, "N/A"))) %>% 
+    mutate(capacity = as.numeric(str_remove(capacity_clean, "-")),
+           wave_1_pop_reduction = as.numeric(wave_1_pop_reduction_clean),
+           wave_1_pop_prior = as.numeric(str_remove(wave_1_pop_prior_clean, "N/A"))) %>%
     # Clean date
     mutate(date_checked = janitor::excel_numeric_to_date(as.numeric(date_checked))) %>% 
     # Create source_reports excluding population
